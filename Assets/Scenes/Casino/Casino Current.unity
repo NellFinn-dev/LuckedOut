@@ -33382,7 +33382,7 @@ MonoBehaviour:
   Back: {fileID: 6384268624528805532}
   active: 0
   afterSwimRecoverTime: 4
-  regularRecoverTime: 0.75
+  regularRecoverTime: 1.5
   FallingObjAnims:
   - {fileID: 610541258}
   - {fileID: 853551060}
