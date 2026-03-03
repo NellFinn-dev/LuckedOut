@@ -1,0 +1,1872 @@
+fileFormatVersion: 2
+guid: 83814ed292f226541a31e6cd149f6ee0
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Slot Machine_Frame_0
+    originalName: 
+    pivot: {x: 0.516129, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 223
+      width: 31
+      height: 48
+    spriteID: f024339387adcdb478f692e0f9fe2985
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 223}
+  - name: Slot Machine_Frame_1
+    originalName: 
+    pivot: {x: 0.39130434, y: -0.13636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 171
+      width: 46
+      height: 44
+    spriteID: c710fc3b94f8a634b8dc924af6b5ef01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 171}
+  - name: Slot Machine_Frame_2
+    originalName: 
+    pivot: {x: 0.36956522, y: -0.19148935}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 116
+      width: 46
+      height: 47
+    spriteID: 16734116212dcd34382a41c531701db8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 116}
+  - name: Slot Machine_Frame_3
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 169
+      width: 46
+      height: 48
+    spriteID: bd6b32b60d0a4b5498f71307b627e28b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 169}
+  - name: Slot Machine_Frame_4
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 225
+      width: 46
+      height: 48
+    spriteID: f4f7689c7cf00904494d2bbd4005a3ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 225}
+  - name: Slot Machine_Frame_5
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 281
+      width: 46
+      height: 48
+    spriteID: cc36f0f2903c3694ea02cb3a56e720d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 281}
+  - name: Slot Machine_Frame_6
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 337
+      width: 46
+      height: 48
+    spriteID: e5d5542b85de21b44832cbee3a97767b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 337}
+  - name: Slot Machine_Frame_7
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 393
+      width: 46
+      height: 48
+    spriteID: e692f76901f8d56488b3a9eaa60594d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 393}
+  - name: Slot Machine_Frame_8
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 449
+      width: 46
+      height: 48
+    spriteID: 750a77a7b3375e94290154623400588e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 449}
+  - name: Slot Machine_Frame_9
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 4
+      width: 46
+      height: 48
+    spriteID: 6cf2733a0f0fd8542ba31835a72e9269
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 4}
+  - name: Slot Machine_Frame_10
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 60
+      width: 46
+      height: 48
+    spriteID: 22a103beb0c9bca40a4e2259d27a9369
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 60}
+  - name: Slot Machine_Frame_11
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 116
+      width: 46
+      height: 48
+    spriteID: 77a5d54b50bef4547be3d7de27f3400c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 116}
+  - name: Slot Machine_Frame_12
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 172
+      width: 46
+      height: 48
+    spriteID: a6da8830734d048478ee093b9d3c6d2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 172}
+  - name: Slot Machine_Frame_13
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 228
+      width: 46
+      height: 48
+    spriteID: 77a17f94f5dc94e4bb84bbb004b1274a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 228}
+  - name: Slot Machine_Frame_14
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 284
+      width: 46
+      height: 48
+    spriteID: ab36701fb2ea42d45aca2c54adee6d5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 284}
+  - name: Slot Machine_Frame_15
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 340
+      width: 46
+      height: 48
+    spriteID: f18da6a7874e62d4b93a714e1807bfe1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 340}
+  - name: Slot Machine_Frame_16
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 396
+      width: 46
+      height: 48
+    spriteID: d09c29a1f5f89c642aa73329d72573c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 396}
+  - name: Slot Machine_Frame_17
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 452
+      width: 46
+      height: 48
+    spriteID: 56edb7a3655b66347905eeb46593c354
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 452}
+  - name: Slot Machine_Frame_18
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 4
+      width: 46
+      height: 48
+    spriteID: aa85ccb32f4daac45a96aa880274a9fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 4}
+  - name: Slot Machine_Frame_19
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 60
+      width: 46
+      height: 48
+    spriteID: 2810f1b83707398419ab80082bad0f3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 60}
+  - name: Slot Machine_Frame_20
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 116
+      width: 46
+      height: 48
+    spriteID: 0bd99f59db6b16e4f8419a81d0bc9c65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 116}
+  - name: Slot Machine_Frame_21
+    originalName: 
+    pivot: {x: 0.375, y: -0.2195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 383
+      y: 4
+      width: 48
+      height: 41
+    spriteID: c93ee7cd5a74dfc40bdf6f4308e422fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 383, y: 4}
+  - name: Slot Machine_Frame_22
+    originalName: 
+    pivot: {x: 0.3617021, y: -0.19148935}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 47
+      height: 47
+    spriteID: e82977cf57123b249b15b7759f119dd8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Slot Machine_Frame_23
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 172
+      width: 46
+      height: 48
+    spriteID: 10b911b9cc1d6674390c55bfb79f8843
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 172}
+  - name: Slot Machine_Frame_24
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 228
+      width: 46
+      height: 48
+    spriteID: a58f9cd2cff244d449d20226df6c1195
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 228}
+  - name: Slot Machine_Frame_25
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 284
+      width: 46
+      height: 48
+    spriteID: 5c950127aeba78f438d23b6b9a1c1c26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 284}
+  - name: Slot Machine_Frame_26
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 340
+      width: 46
+      height: 48
+    spriteID: 8ab6f4a1539cad94197b5e1e641c7653
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 340}
+  - name: Slot Machine_Frame_27
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 396
+      width: 46
+      height: 48
+    spriteID: fcbd0ba93f7288242929167483cbd136
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 396}
+  - name: Slot Machine_Frame_28
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 452
+      width: 46
+      height: 48
+    spriteID: b304f0814394e7e4d8f19e3925667fb1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 452}
+  - name: Slot Machine_Frame_29
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 4
+      width: 46
+      height: 48
+    spriteID: 2ab4970549b20474c930cc8e91d15e2f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 4}
+  - name: Slot Machine_Frame_30
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 60
+      width: 46
+      height: 48
+    spriteID: 46eec96221023504d84cb456c2396509
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 60}
+  - name: Slot Machine_Frame_31
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 116
+      width: 46
+      height: 48
+    spriteID: bc40ebc05096ebe439adb3ca03f772fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 116}
+  - name: Slot Machine_Frame_32
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 172
+      width: 46
+      height: 48
+    spriteID: 3eaeb9ad3402c0f428916804e7d8a1ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 172}
+  - name: Slot Machine_Frame_33
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 228
+      width: 46
+      height: 48
+    spriteID: 4fb433a138a36ad4384139fec5b7945e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 228}
+  - name: Slot Machine_Frame_34
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 284
+      width: 46
+      height: 48
+    spriteID: 0be958b56a36eb943894dc67a21b14ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 284}
+  - name: Slot Machine_Frame_35
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 340
+      width: 46
+      height: 48
+    spriteID: b791c4d5db497f946b22ff9ded352ed3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 340}
+  - name: Slot Machine_Frame_36
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 396
+      width: 46
+      height: 48
+    spriteID: 4697f3bb141579c4c8aef854e16305a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 396}
+  - name: Slot Machine_Frame_37
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 452
+      width: 46
+      height: 48
+    spriteID: af7d7fd81308dc34db7236bf9f7cbd3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 452}
+  - name: Slot Machine_Frame_38
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 4
+      width: 46
+      height: 48
+    spriteID: 9961ae44a73d63f45b2046371e3b428d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 4}
+  - name: Slot Machine_Frame_39
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 60
+      width: 46
+      height: 48
+    spriteID: 0d20ea1ea677aa04f9bd00b42e33d7e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 60}
+  - name: Slot Machine_Frame_40
+    originalName: 
+    pivot: {x: 0.375, y: -0.2195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 383
+      y: 53
+      width: 48
+      height: 41
+    spriteID: 51a1b9598e430e843ba566d03a38c044
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 383, y: 53}
+  - name: Slot Machine_Frame_41
+    originalName: 
+    pivot: {x: 0.3617021, y: -0.19148935}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 59
+      width: 47
+      height: 47
+    spriteID: 2e5bf5f3789bc4f40908ae4f1976369a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 59}
+  - name: Slot Machine_Frame_42
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 116
+      width: 46
+      height: 48
+    spriteID: c26ba8e719829f64094e2df0254d7b0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 116}
+  - name: Slot Machine_Frame_43
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 172
+      width: 46
+      height: 48
+    spriteID: 69736f54ebfe1b744b6f291f44969be3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 172}
+  - name: Slot Machine_Frame_44
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 228
+      width: 46
+      height: 48
+    spriteID: 12bcd6ed92d0e97448e5f4b880da7f97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 228}
+  - name: Slot Machine_Frame_45
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 284
+      width: 46
+      height: 48
+    spriteID: 2ac789abea1d4c74a9206e22ec56a0bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 284}
+  - name: Slot Machine_Frame_46
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 340
+      width: 46
+      height: 48
+    spriteID: e22dc22ee8081284fbbcb876b76f8f1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 340}
+  - name: Slot Machine_Frame_47
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 396
+      width: 46
+      height: 48
+    spriteID: 42460be9f44a8d24b8485c1941bf6368
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 396}
+  - name: Slot Machine_Frame_48
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 452
+      width: 46
+      height: 48
+    spriteID: 8d26d0958204d2f4da394452d1500da4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 452}
+  - name: Slot Machine_Frame_49
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 4
+      width: 46
+      height: 48
+    spriteID: 778f557266cb9744da16522a688d5065
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 4}
+  - name: Slot Machine_Frame_50
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 60
+      width: 46
+      height: 48
+    spriteID: e0ce4a70239a6ba428b8c2a0ab5522fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 60}
+  - name: Slot Machine_Frame_51
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 116
+      width: 46
+      height: 48
+    spriteID: a2061763e93ba7b41aa9b0dde91de9dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 116}
+  - name: Slot Machine_Frame_52
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 172
+      width: 46
+      height: 48
+    spriteID: 4a6bae5b86d288747a42bfe0a6e7dedb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 172}
+  - name: Slot Machine_Frame_53
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 228
+      width: 46
+      height: 48
+    spriteID: 0a17eb90935d4ee4babaaed75aa77b5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 228}
+  - name: Slot Machine_Frame_54
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 284
+      width: 46
+      height: 48
+    spriteID: b28ff939aefeac04aa9d00705a578ccf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 284}
+  - name: Slot Machine_Frame_55
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 340
+      width: 46
+      height: 48
+    spriteID: 1d0a3c773f0bee94f8d2dab884a2942e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 340}
+  - name: Slot Machine_Frame_56
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 396
+      width: 46
+      height: 48
+    spriteID: 8d17750be7d2ff44283a515fa86d3a64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 396}
+  - name: Slot Machine_Frame_57
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 275
+      y: 452
+      width: 46
+      height: 48
+    spriteID: 1cc3b17bb41862a45986474effa0516f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 275, y: 452}
+  - name: Slot Machine_Frame_58
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 4
+      width: 46
+      height: 48
+    spriteID: 672e5d8f995980544be919113f661531
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 4}
+  - name: Slot Machine_Frame_59
+    originalName: 
+    pivot: {x: 0.375, y: -0.2195122}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 383
+      y: 102
+      width: 48
+      height: 41
+    spriteID: 8b8cad6e443c74d41a3ed803101c5e30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 383, y: 102}
+  - name: Slot Machine_Frame_60
+    originalName: 
+    pivot: {x: 0.3617021, y: -0.19148935}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 114
+      width: 47
+      height: 47
+    spriteID: dd9a7b6bb9c9134478ec5fa43b830a3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 114}
+  - name: Slot Machine_Frame_61
+    originalName: 
+    pivot: {x: 0.3478261, y: -0.1875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 60
+      width: 46
+      height: 48
+    spriteID: d0db303693451be408d44b822ac7d3ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 60}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1712290395
+    name: Slot Machine
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Slot Machine_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 16
+        y: 9
+        width: 31
+        height: 48
+      spriteId: f024339387adcdb478f692e0f9fe2985
+    - name: Slot Machine_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 14
+        y: 6
+        width: 46
+        height: 44
+      spriteId: c710fc3b94f8a634b8dc924af6b5ef01
+    - name: Slot Machine_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 15
+        y: 9
+        width: 46
+        height: 47
+      spriteId: 16734116212dcd34382a41c531701db8
+    - name: Slot Machine_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: bd6b32b60d0a4b5498f71307b627e28b
+    - name: Slot Machine_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: f4f7689c7cf00904494d2bbd4005a3ba
+    - name: Slot Machine_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: cc36f0f2903c3694ea02cb3a56e720d8
+    - name: Slot Machine_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: e5d5542b85de21b44832cbee3a97767b
+    - name: Slot Machine_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: e692f76901f8d56488b3a9eaa60594d3
+    - name: Slot Machine_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 750a77a7b3375e94290154623400588e
+    - name: Slot Machine_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 6cf2733a0f0fd8542ba31835a72e9269
+    - name: Slot Machine_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 22a103beb0c9bca40a4e2259d27a9369
+    - name: Slot Machine_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 77a5d54b50bef4547be3d7de27f3400c
+    - name: Slot Machine_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: a6da8830734d048478ee093b9d3c6d2b
+    - name: Slot Machine_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 77a17f94f5dc94e4bb84bbb004b1274a
+    - name: Slot Machine_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: ab36701fb2ea42d45aca2c54adee6d5f
+    - name: Slot Machine_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: f18da6a7874e62d4b93a714e1807bfe1
+    - name: Slot Machine_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: d09c29a1f5f89c642aa73329d72573c4
+    - name: Slot Machine_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 56edb7a3655b66347905eeb46593c354
+    - name: Slot Machine_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: aa85ccb32f4daac45a96aa880274a9fb
+    - name: Slot Machine_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 2810f1b83707398419ab80082bad0f3a
+    - name: Slot Machine_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 0bd99f59db6b16e4f8419a81d0bc9c65
+    - name: Slot Machine_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 14
+        y: 9
+        width: 48
+        height: 41
+      spriteId: c93ee7cd5a74dfc40bdf6f4308e422fa
+    - name: Slot Machine_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 15
+        y: 9
+        width: 47
+        height: 47
+      spriteId: e82977cf57123b249b15b7759f119dd8
+    - name: Slot Machine_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 10b911b9cc1d6674390c55bfb79f8843
+    - name: Slot Machine_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: a58f9cd2cff244d449d20226df6c1195
+    - name: Slot Machine_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 5c950127aeba78f438d23b6b9a1c1c26
+    - name: Slot Machine_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 8ab6f4a1539cad94197b5e1e641c7653
+    - name: Slot Machine_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: fcbd0ba93f7288242929167483cbd136
+    - name: Slot Machine_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: b304f0814394e7e4d8f19e3925667fb1
+    - name: Slot Machine_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 2ab4970549b20474c930cc8e91d15e2f
+    - name: Slot Machine_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 46eec96221023504d84cb456c2396509
+    - name: Slot Machine_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: bc40ebc05096ebe439adb3ca03f772fa
+    - name: Slot Machine_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 3eaeb9ad3402c0f428916804e7d8a1ea
+    - name: Slot Machine_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 4fb433a138a36ad4384139fec5b7945e
+    - name: Slot Machine_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 0be958b56a36eb943894dc67a21b14ae
+    - name: Slot Machine_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: b791c4d5db497f946b22ff9ded352ed3
+    - name: Slot Machine_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 4697f3bb141579c4c8aef854e16305a2
+    - name: Slot Machine_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: af7d7fd81308dc34db7236bf9f7cbd3f
+    - name: Slot Machine_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 9961ae44a73d63f45b2046371e3b428d
+    - name: Slot Machine_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 0d20ea1ea677aa04f9bd00b42e33d7e8
+    - name: Slot Machine_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 14
+        y: 9
+        width: 48
+        height: 41
+      spriteId: 51a1b9598e430e843ba566d03a38c044
+    - name: Slot Machine_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 15
+        y: 9
+        width: 47
+        height: 47
+      spriteId: 2e5bf5f3789bc4f40908ae4f1976369a
+    - name: Slot Machine_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: c26ba8e719829f64094e2df0254d7b0c
+    - name: Slot Machine_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 69736f54ebfe1b744b6f291f44969be3
+    - name: Slot Machine_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 12bcd6ed92d0e97448e5f4b880da7f97
+    - name: Slot Machine_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 2ac789abea1d4c74a9206e22ec56a0bb
+    - name: Slot Machine_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: e22dc22ee8081284fbbcb876b76f8f1a
+    - name: Slot Machine_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 42460be9f44a8d24b8485c1941bf6368
+    - name: Slot Machine_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 8d26d0958204d2f4da394452d1500da4
+    - name: Slot Machine_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 778f557266cb9744da16522a688d5065
+    - name: Slot Machine_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: e0ce4a70239a6ba428b8c2a0ab5522fc
+    - name: Slot Machine_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: a2061763e93ba7b41aa9b0dde91de9dc
+    - name: Slot Machine_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 4a6bae5b86d288747a42bfe0a6e7dedb
+    - name: Slot Machine_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 0a17eb90935d4ee4babaaed75aa77b5d
+    - name: Slot Machine_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: b28ff939aefeac04aa9d00705a578ccf
+    - name: Slot Machine_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 1d0a3c773f0bee94f8d2dab884a2942e
+    - name: Slot Machine_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 8d17750be7d2ff44283a515fa86d3a64
+    - name: Slot Machine_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 1cc3b17bb41862a45986474effa0516f
+    - name: Slot Machine_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: 672e5d8f995980544be919113f661531
+    - name: Slot Machine_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 14
+        y: 9
+        width: 48
+        height: 41
+      spriteId: 8b8cad6e443c74d41a3ed803101c5e30
+    - name: Slot Machine_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 15
+        y: 9
+        width: 47
+        height: 47
+      spriteId: dd9a7b6bb9c9134478ec5fa43b830a3a
+    - name: Slot Machine_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 16
+        y: 9
+        width: 46
+        height: 48
+      spriteId: d0db303693451be408d44b822ac7d3ae
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
