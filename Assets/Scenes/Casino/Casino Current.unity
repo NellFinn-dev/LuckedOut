@@ -21222,9 +21222,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4c355c33d6381154abbaab45c0a72971, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f4da2b1f206bcdb4b9fad492ee6aadc9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.31
+  m_Volume: 0.123
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -21678,7 +21678,7 @@ MonoBehaviour:
   renderer: {fileID: 1926605681}
   health: 3
   canBeHit: 1
-  knockbackSpeed: 20
+  knockbackSpeed: 9.6
   knockbackTime: 0.25
   stunnedTime: 0.5
   stunned: 0
