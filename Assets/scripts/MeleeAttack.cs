@@ -21,8 +21,10 @@ public class MeleeAttack : MonoBehaviour
     // For sounds
     public AudioManager AM;
     public TimeManager TM;
-    public ControllerRumble rumbleScript;
 
+    public effectSpawner effectScript;
+
+    public int punchEffectIndex, punchEffectSpawnIndex;
     #endregion
 
     #region default methods 
@@ -34,7 +36,6 @@ public class MeleeAttack : MonoBehaviour
         playerScript = GameObject.FindObjectOfType<Player>().GetComponent<Player>();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         TM = GameObject.FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
-        rumbleScript = GameObject.FindObjectOfType<ControllerRumble>().GetComponent<ControllerRumble>();
     }
 
     #endregion
@@ -48,8 +49,12 @@ public class MeleeAttack : MonoBehaviour
 
         for (int i = 0; i < hit.Length; i++)
         {
-            hit[i].GetComponent<Entity>().takeDamage(rb);
-            lastHit = hit[i].GetComponent<Entity>();
+            if (hit[i].GetComponent<Entity>() != null)
+            {
+                hit[i].GetComponent<Entity>().takeDamage(rb);
+                lastHit = hit[i].GetComponent<Entity>();
+                effectScript.spawnOneEffect(punchEffectIndex, punchEffectSpawnIndex);
+            }
         }
 
         // For playing a random option out of 3 different attack sounds

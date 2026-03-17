@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
     #region Update
 
-    private void Update()
+    private void FixedUpdate()
     {
         #region stun state
 

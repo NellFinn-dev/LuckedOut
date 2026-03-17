@@ -116,7 +116,10 @@ public class PlayerInputs : MonoBehaviour
     public void Dash(InputAction.CallbackContext context)
     {
         if (playercontrol.canPerformActions && !levelEnded)
+        {
             movementScript.StartCoroutine("DashEvent", movementScript.dashTime);
+        }
+
         // Play Dash sound
         AM.Play("Dash");
     }

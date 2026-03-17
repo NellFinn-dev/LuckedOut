@@ -18,7 +18,6 @@ public class MeleeEnemy : Entity
     public float AttackTime;
     public float Closenes;
     public Transform Attackspot;
-    public bool facingRight;
     public SpriteRenderer Animations;
     public float AttackSpeed;
     public Transform Back;
@@ -43,6 +42,7 @@ public class MeleeEnemy : Entity
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         // Getting reference for the AudioManager
         AM = GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
+        TM = GameObject.FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
         camShakeScript = GameObject.FindObjectOfType<CameraShakeScript>().GetComponent<CameraShakeScript>();
     }
 

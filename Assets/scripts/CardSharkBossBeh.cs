@@ -16,7 +16,6 @@ public class CardSharkBossBeh : Entity
     public bool Attacking;
     public float Closenes;
     public GameObject Projectile;
-    public bool facingRight;
     public SpriteRenderer Animations;
     public float AttackSpeed;
     public Transform Back;
@@ -60,11 +59,12 @@ public class CardSharkBossBeh : Entity
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         AM = GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
+        TM = GameObject.FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
         camShakeScript = GameObject.FindObjectOfType<CameraShakeScript>().GetComponent<CameraShakeScript>();
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (canBeHit)
         {
@@ -74,10 +74,7 @@ public class CardSharkBossBeh : Entity
         {
             spinningCardOb.transform.position = Vector2.Lerp(transform.position, cardPositions[0].position, cardSmoothing * Time.deltaTime);
         }
-    }
 
-    private void FixedUpdate()
-    {
 
         Closenes = Vector2.Distance(transform.position, Player.position);
 
@@ -195,7 +192,6 @@ public class CardSharkBossBeh : Entity
     }
 
     #endregion
-
 
     #region functions
     /*

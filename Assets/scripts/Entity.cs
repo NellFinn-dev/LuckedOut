@@ -36,7 +36,10 @@ public class Entity : MonoBehaviour
     public Material[] materials;
 
     public bool ghostTime;
-    
+
+    public effectSpawner effectScript;
+
+    public bool facingRight;
 
     // For sounds
     public AudioManager AM;
@@ -47,30 +50,25 @@ public class Entity : MonoBehaviour
     //Instantiating variables 
     public bool variablesInsantiated;
 
-    // Rumble
-    public ControllerRumble rumbleScript;
-
     #endregion
 
     #region default Functions
 
-    private void Update()
+    private void Awake()
     {
-        if (!variablesInsantiated)
+        GameObject managerObj = GameObject.FindGameObjectWithTag("luckManager");
+        if (managerObj != null)
         {
-            instantiateVariables();
-            variablesInsantiated = true;
+            AM = managerObj.GetComponent<AudioManager>();
+            TM = managerObj.GetComponent<TimeManager>();
         }
-    }
+        else
+        {
+            Debug.LogError("Could not find object with tag 'luckManager'!");
+        }
 
-    public void instantiateVariables()
-    {
-        // sets the refrence for the cam shake script
-        camShakeScript = GameObject.FindObjectOfType<CameraShakeScript>().GetComponent<CameraShakeScript>();
-        // Getting reference for the AudioManager
-        AM = GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
-        TM = GameObject.FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
-        rumbleScript = GameObject.FindObjectOfType<ControllerRumble>().GetComponent<ControllerRumble>();
+        camShakeScript = FindObjectOfType<CameraShakeScript>().GetComponent<CameraShakeScript>();
+
     }
 
     #endregion
@@ -126,7 +124,9 @@ public class Entity : MonoBehaviour
         if (canBeHit && health > 0)
         {
             anim.SetTrigger("Hit");
-            
+
+            effectScript.SpawnRand();
+
             health--;
             // Triggers the camShake script
             camShakeScript.triggerShake();
@@ -161,6 +161,7 @@ public class Entity : MonoBehaviour
                 }
             }
         }
+
         #endregion
         //StartCoroutine(hitStop(hitStopTime));
     }
@@ -194,6 +195,7 @@ public class Entity : MonoBehaviour
 
         rb.velocity = Vector3.zero;
     }
+
     // Stun IEnumerator
     public IEnumerator stunTime(float hitTime)
     {
@@ -234,7 +236,6 @@ public class Entity : MonoBehaviour
         yield return new WaitForSecondsRealtime(flashTime);
 
         renderer.material = materials[0];
-
     }
 
     #endregion

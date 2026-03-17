@@ -37,23 +37,21 @@ public class PlayerMovement : MonoBehaviour
         AM = GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
     }
 
-    public void Update()
+    #endregion
+
+    #region movement
+
+    private void Update()
     {
+
         // Setting move dir and lastmovedir
         moveDir = inputScript.moveDirection;
         lastmoveDir = inputScript.lastmoveDirection;
 
         //moveDir = inputScript.move.ReadValue<Vector2>();
-    }
 
-    #endregion
-
-    #region movement
-
-    private void FixedUpdate()
-    {
         // Calls the move method
-        if(playercontrol.canPerformActions && GameObject.FindObjectOfType<Player>().GetComponent<Entity>().health > 0)
+        if (playercontrol.canPerformActions && GameObject.FindObjectOfType<Player>().GetComponent<Entity>().health > 0 && !dashing)
         {
             Move();
         }
@@ -71,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     public IEnumerator DashEvent (float dashTime)
     {
         dashing = true;
+
         for (int i = 0; i < dashEffects.Length; i++)
         {
             dashEffects[i].SetActive(true);

@@ -19,7 +19,6 @@ public class RangedEnemy : Entity
     public float Closenes;
     public Transform[] ProjectileSpots;
     public GameObject Projectile;
-    public bool facingRight;
     public SpriteRenderer Animations;
     public float AttackSpeed;
     public Transform Back;
@@ -45,6 +44,7 @@ public class RangedEnemy : Entity
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         AM = GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
+        TM = GameObject.FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
         camShakeScript = GameObject.FindObjectOfType<CameraShakeScript>().GetComponent<CameraShakeScript>();
     }
 
@@ -55,85 +55,86 @@ public class RangedEnemy : Entity
             anim.SetTrigger("Down");
             agent.speed = 0;
             return;
-        }
 
-        var delta = Player.position - transform.position;
-        if (!Attacking && active)
-        {
-            if (delta.x >= 0)
-            { // mouse is on right side of player
-                Animations.flipX = false;
-                facingRight = true;
-                projectileHolder.transform.position = projectileSpots[1].position;
-                projectileHolder.transform.rotation = projectileSpots[1].rotation;
-            }
-            else if (delta.x < 0)
-            { // mouse is on left side
-                Animations.flipX = true;
-                facingRight = false;
-                projectileHolder.transform.position = projectileSpots[0].position;
-                projectileHolder.transform.rotation = projectileSpots[0].rotation;
-            }
-        }
 
-        //Checking distance and weather to Attack or to move
-        Closenes = Vector2.Distance(transform.position, Player.position);
-
-        if (!active)
-        {
-            if (Closenes < ActiveRange)
+            var delta = Player.position - transform.position;
+            if (!Attacking && active)
             {
-                anim.SetTrigger("Active");
-                StartCoroutine(activeAnimation(activeAnimTime));
-                // Wait until animation finishes and then start movement
+                if (delta.x >= 0)
+                { // mouse is on right side of player
+                    Animations.flipX = false;
+                    facingRight = true;
+                    projectileHolder.transform.position = projectileSpots[1].position;
+                    projectileHolder.transform.rotation = projectileSpots[1].rotation;
+                }
+                else if (delta.x < 0)
+                { // mouse is on left side
+                    Animations.flipX = true;
+                    facingRight = false;
+                    projectileHolder.transform.position = projectileSpots[0].position;
+                    projectileHolder.transform.rotation = projectileSpots[0].rotation;
+                }
             }
 
-            return;
-        }
+            //Checking distance and weather to Attack or to move
+            Closenes = Vector2.Distance(transform.position, Player.position);
 
-
-        if (Closenes > AttackRange && Attacking == false)
-        {
-            agent.SetDestination(Player.position);
-            transform.position = Vector2.MoveTowards(transform.position, Back.position, speed * Time.deltaTime);
-            speed = RunSpeed;
-            agent.speed = speed;
-
-            if (agent.velocity.x != 0 || agent.velocity.y != 0)
+            if (!active)
             {
-                anim.SetBool("Running", true);
+                if (Closenes < ActiveRange)
+                {
+                    anim.SetTrigger("Active");
+                    StartCoroutine(activeAnimation(activeAnimTime));
+                    // Wait until animation finishes and then start movement
+                }
+
+                return;
             }
-            else
+
+
+            if (Closenes > AttackRange && Attacking == false)
             {
-                anim.SetBool("Running", false);
+                agent.SetDestination(Player.position);
+                transform.position = Vector2.MoveTowards(transform.position, Back.position, speed * Time.deltaTime);
+                speed = RunSpeed;
+                agent.speed = speed;
+
+                if (agent.velocity.x != 0 || agent.velocity.y != 0)
+                {
+                    anim.SetBool("Running", true);
+                }
+                else
+                {
+                    anim.SetBool("Running", false);
+                }
             }
+
+
+            if (Closenes <= AttackRange && Attacking == false)
+            {
+                Attack();
+                //.script.Flash();
+            }
+
+            //Moving towards the player
+            if (Closenes < AvoidRange && Closenes > AttackRange && Attacking == false)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Back.position, speed * Time.deltaTime);
+            }
+
+            if (Closenes < AvoidRange && Closenes < AttackRange && Attacking == false)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+            }
+
+            if (Attacking)
+            {
+                agent.speed = 0;
+                agent.SetDestination(transform.position);
+            }
+
+
         }
-
-
-        if (Closenes <= AttackRange && Attacking == false)
-        {
-            Attack();
-            //.script.Flash();
-        }
-
-        //Moving towards the player
-        if (Closenes < AvoidRange && Closenes > AttackRange && Attacking == false)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, Back.position, speed * Time.deltaTime);
-        }
-
-        if (Closenes < AvoidRange && Closenes < AttackRange && Attacking == false)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
-        }
-
-        if (Attacking)
-        {
-            agent.speed = 0;
-            agent.SetDestination(transform.position);
-        }
-
-
     }
 
     #endregion

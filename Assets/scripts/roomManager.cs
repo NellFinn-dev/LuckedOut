@@ -17,7 +17,7 @@ public class roomManager : MonoBehaviour
 
     #region methods 
 
-    private void Update()
+    public void roomSwitch()
     {
         // Sets the cam positions based on the room the player is currently in
         if (camSwitching)

@@ -29,7 +29,7 @@ public class ComboManager : MonoBehaviour
     }
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         // Runs the timer down and resets it and the combo score when it hits 0
         if(comboTimer <= 0)

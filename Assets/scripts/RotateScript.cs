@@ -9,7 +9,7 @@ public class RotateScript : MonoBehaviour
     public Vector3 rotationAmount;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Rotate the object every frame
         // Multiply by Time.deltaTime to ensure frame-independent rotation
