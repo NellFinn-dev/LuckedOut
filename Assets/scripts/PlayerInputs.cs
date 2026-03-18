@@ -33,6 +33,8 @@ public class PlayerInputs : MonoBehaviour
     // For sounds
     public AudioManager AM;
 
+    public Entity entityScript;
+
     #endregion
 
     #region Input setting
@@ -94,6 +96,14 @@ public class PlayerInputs : MonoBehaviour
             {
                 restartAnim.SetBool("Restarting", false);
             }
+        }
+
+        if(lastmoveDirection.x > 0)
+        {
+            entityScript.facingRight = true;
+        } else if (lastmoveDirection.x < 0)
+        {
+            entityScript.facingRight = false;
         }
 
         if(levelEnded == true && GameObject.FindObjectOfType<Player>().GetComponent<Entity>().health > 0)

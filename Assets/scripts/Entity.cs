@@ -160,6 +160,14 @@ public class Entity : MonoBehaviour
                     anim.SetTrigger("Downed");
                 }
             }
+
+            if(other.transform.position.x < transform.position.x)
+            {
+                facingRight = false;
+            } else
+            {
+                facingRight = true;
+            }
         }
 
         #endregion

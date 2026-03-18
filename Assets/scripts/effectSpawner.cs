@@ -15,16 +15,16 @@ public class effectSpawner : MonoBehaviour
         // Rotating the hit spots
         if (entityScript.facingRight)
         {
-            for (int i = 0; i < hitEffectsRand.Length; i++)
+            for (int i = 0; i < hitEffectSpawns.Length; i++)
             {
                 hitEffectSpawns[i].transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
         else
         {
-            for (int i = 0; i < hitEffectsRand.Length; i++)
+            for (int i = 0; i < hitEffectSpawns.Length; i++)
             {
-                hitEffectSpawns[i].transform.rotation = Quaternion.Euler(0, 180, 0);
+                hitEffectSpawns[i].transform.rotation = Quaternion.Euler(0, -180, 0);
             }
         }
 
@@ -44,20 +44,20 @@ public class effectSpawner : MonoBehaviour
         // Rotating the hit spots
         if (entityScript.facingRight)
         {
-            for (int i = 0; i < hitEffectsRand.Length; i++)
+            for (int i = 0; i < hitEffectSpawns.Length; i++)
             {
                 hitEffectSpawns[i].transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
         else
         {
-            for (int i = 0; i < hitEffectsRand.Length; i++)
+            for (int i = 0; i < hitEffectSpawns.Length; i++)
             {
-                hitEffectSpawns[i].transform.rotation = Quaternion.Euler(0, 180, 0);
+                hitEffectSpawns[i].transform.rotation = Quaternion.Euler(0, -180, 0);
             }
         }
-     
-            Instantiate(hitEffectsSpecific[effectIndex], hitEffectSpawns[spotIndex].position, hitEffectSpawns[spotIndex].rotation);
+
+        Instantiate(hitEffectsSpecific[effectIndex], hitEffectSpawns[spotIndex].position, hitEffectSpawns[spotIndex].rotation);
         
     }
 }
