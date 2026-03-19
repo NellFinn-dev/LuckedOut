@@ -38,6 +38,8 @@ public class luckManager : MonoBehaviour
     // Time for ghost time if rolled 
     public float invincibilityTime;
     public float onePunchTime;
+    public GameObject cardSpin;
+
     #endregion
 
     private void Start()
@@ -204,6 +206,7 @@ public class luckManager : MonoBehaviour
         {
             luckText.text = "You rolled temp invinicibility!";
             // This method is called in the Entity script since it was already written and is used in other cases
+            StartCoroutine(cardsOff());
             GameObject.FindObjectOfType<Player>().GetComponent<Entity>().ghostTimeCall(invincibilityTime); 
         }
 
@@ -211,6 +214,13 @@ public class luckManager : MonoBehaviour
         {
             // Find a third effect
         }
+    }
+
+    IEnumerator cardsOff()
+    {
+        cardSpin.SetActive(true);
+        yield return new WaitForSeconds(invincibilityTime);
+        cardSpin.SetActive(false);
     }
 
     /*

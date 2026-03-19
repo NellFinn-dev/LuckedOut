@@ -24,6 +24,12 @@ public class PlayerAttack : MonoBehaviour
     public bool attacking;
     public bool inPunch;
 
+    public int attackCount;
+    public float allowedDelay;
+    public float delayTimer;
+    public bool attackCooldown;
+    public float coolDownTime;
+
     // For sounds
     [SerializeField] private AudioManager AM;
     
@@ -47,7 +53,20 @@ public class PlayerAttack : MonoBehaviour
 
         moveDir = inputScript.move.ReadValue<Vector2>();
         // Calls the animations for attacking and uses that to determine the attacking variable (bool)
-        attacking = animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR");
+        attacking = animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") 
+                 || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR")
+                 || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("Kick 1");
+
+        if(delayTimer <= 0)
+        {
+            animScript.anim.ResetTrigger("PunchL");
+            animScript.anim.ResetTrigger("PunchR");
+            animScript.anim.ResetTrigger("Kick");
+            attackCount = 0;
+        } else
+        {
+            delayTimer -= Time.deltaTime;
+        }
         
     }
 
@@ -57,24 +76,60 @@ public class PlayerAttack : MonoBehaviour
     // if the punching is happening then the tirggers for punching will be set
     public void onPunch()
     {
-        // Checking if animations are playing to do combo stuff
+        if (!attackCooldown)
+        {
+            switch (attackCount)
+            {
+                case 0:
+                    animScript.anim.SetTrigger("PunchL");
+                    attackCount++;
+                    break;
+                case 1:
+                    animScript.anim.SetTrigger("PunchR");
+                    attackCount++;
+                    break;
+                case 2:
+                    animScript.anim.SetTrigger("Kick");
+                    attackCount++;
+                    break;
+            }
 
+            if (attackCount >= 3)
+            {
+                attackCount = 0;
+                StartCoroutine(coolDown(coolDownTime));
+            }
+
+            delayTimer = allowedDelay;
+        }
+
+        // Checking if animations are playing to do combo stuff
+        /*
         if (animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL"))
         {
             animScript.anim.SetTrigger("PunchR"); 
         } 
-        
-        if (animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR"))
+        else if (animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR"))
         {
-            animScript.anim.SetTrigger("PunchL");
+            animScript.anim.SetTrigger("Kick");
         }
 
-        if (!animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") && !animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR"))
+        if (!animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") && !animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR") 
+            && !animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("Kick 1"))
         { 
             animScript.anim.SetTrigger("PunchL");
         }
+        */
 
         //else (for just two punches delete the next if)
+    }
+
+    public IEnumerator coolDown(float coolDownTime)
+    {
+        attackCooldown = true;
+
+        yield return new WaitForSeconds(coolDownTime);
+        attackCooldown = false;
     }
 
     // IEnumerator for punch sliding

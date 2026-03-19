@@ -8,7 +8,6 @@ public class SlotMachine : Entity
 
     public int startingHealth;
     public Animator uiAnim;
-
     #endregion
 
     #region methods

@@ -27,9 +27,21 @@ public class WaveSpawner : MonoBehaviour
     public bool started;
     public bool ended;
 
+    public bool levelClearingRoom;
+    public Animator endScreen;
+
+    public TimeManager TM;
+
     #endregion
 
     #region methods
+
+    private void Start()
+    {
+        endScreen = GameObject.FindGameObjectWithTag("endScreen").GetComponent<Animator>();
+        TM = FindObjectOfType<TimeManager>();
+    }
+
     // Start is called before the first frame update
     public void startSpawner()
     {
@@ -50,17 +62,24 @@ public class WaveSpawner : MonoBehaviour
 
     public void endSpawner()
     {
-        // Deactivate doors
-        for (int i = 0; i < doors.Length; i++)
+        if (!levelClearingRoom)
         {
-            doors[i].SetActive(false);
-        }
+            // Deactivate doors
+            for (int i = 0; i < doors.Length; i++)
+            {
+                doors[i].SetActive(false);
+            }
 
-        // Soudns and cam shake
-        //GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>().Play("closedDoors");
-        //GameObject.FindObjectOfType<CameraShakeScript>().GetComponent<CameraShakeScript>().triggerShake();
-        leaveArrow.SetActive(true);
-        ended = true;
+            // Soudns and cam shake
+            //GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>().Play("closedDoors");
+            //GameObject.FindObjectOfType<CameraShakeScript>().GetComponent<CameraShakeScript>().triggerShake();
+            leaveArrow.SetActive(true);
+            ended = true;
+        } else
+        {
+            endScreen.SetTrigger("endScreenAnim");
+            TM.slowTime();
+        }
     }
 
     // Update is called once per frame

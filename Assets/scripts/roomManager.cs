@@ -22,23 +22,22 @@ public class roomManager : MonoBehaviour
         // Sets the cam positions based on the room the player is currently in
         if (camSwitching)
         {
-            if (roomTopsOn)
+            cam.transform.position = (camSpots[roomSelected].position + GameObject.FindGameObjectWithTag("Player").transform.position)/2f;
+        }
+
+        if (roomTopsOn)
+        {
+            for (int i = 0; i < roomTops.Length; i++)
             {
-                for (int i = 0; i < roomTops.Length; i++)
+                if (i == roomSelected)
                 {
-                    if (i == roomSelected)
-                    {
-                        roomTops[i].SetActive(true);
-                    }
-                    else
-                    {
-                        roomTops[i].SetActive(false);
-                    }
+                    roomTops[i].SetActive(true);
+                }
+                else
+                {
+                    roomTops[i].SetActive(false);
                 }
             }
-
-            cam.transform.position = (camSpots[roomSelected].position + GameObject.FindGameObjectWithTag("Player").transform.position)/2f;
-
         }
     }
 

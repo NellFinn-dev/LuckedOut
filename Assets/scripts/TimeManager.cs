@@ -7,10 +7,14 @@ public class TimeManager : MonoBehaviour
     // This script is a time manager for the whole game but will for now just be used for hit stop time manipulation
 
     public float hitstopTime;
-
     public void Start()
     {
         Time.timeScale = 1f;
+    }
+
+    public void slowTime()
+    {
+        Time.timeScale = .3f;
     }
 
     // Trigger method because just running the IEnumerator wasn't working

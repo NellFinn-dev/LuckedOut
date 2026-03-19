@@ -10,6 +10,7 @@ TagManager:
   - camShake
   - Enemy
   - RoomTransition
+  - endScreen
   layers:
   - Default
   - TransparentFX

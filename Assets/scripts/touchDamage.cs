@@ -12,6 +12,8 @@ public class touchDamage : MonoBehaviour
     public Rigidbody2D rb;
     public PlayerMovement playerMovementScript;
 
+    public bool oneHit;
+
     #endregion
 
     #region default functions
@@ -25,24 +27,42 @@ public class touchDamage : MonoBehaviour
     {
         if (collision.tag == "Player" && type == entityType.Enemy && !playerMovementScript.dashing)
         {
-            Entity otherEntity = collision.GetComponent<Entity>();
-
-            otherEntity.takeDamage(rb);
-        }
-        else
-        {
-            return;
+            if (!oneHit)
+            {
+                Entity otherEntity = collision.GetComponent<Entity>();
+                if (otherEntity.canBeHit)
+                {
+                    otherEntity.takeDamage(rb);
+                }
+            }
+            else
+            {
+                Entity otherEntity = collision.GetComponent<Entity>();
+                if (otherEntity.canBeHit)
+                {
+                    otherEntity.health = 1;
+                    otherEntity.takeDamage(rb);
+                }
+            }
         }
 
         if (collision.tag == "Enemy" && type == entityType.Player)
         {
-            Entity otherEntity = collision.GetComponent<Entity>();
+            if (!oneHit)
+            {
+                Entity otherEntity = collision.GetComponent<Entity>();
 
-            otherEntity.takeDamage(rb);
-        }
-        else
-        {
-            return;
+                otherEntity.canBeHit = true;
+                otherEntity.takeDamage(rb);
+            }
+            else
+            {
+                Entity otherEntity = collision.GetComponent<Entity>();
+
+                otherEntity.canBeHit = true;
+                otherEntity.health = 1;
+                otherEntity.takeDamage(rb);
+            }
         }
     }
 

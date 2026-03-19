@@ -174,6 +174,83 @@ public class Entity : MonoBehaviour
         //StartCoroutine(hitStop(hitStopTime));
     }
 
+    public void takeDamageHeavy(Rigidbody2D other)
+    {
+        // For playing a random option out of 3 different hit sounds
+        #region play a sound from a selection
+        int rand = Random.Range(0, 2);
+
+        switch (rand)
+        {
+            case 0:
+                AM.Play("Hit");
+                break;
+            case 1:
+                AM.Play("Hit");
+                break;
+            case 2:
+                AM.Play("Hit");
+                break;
+        }
+
+        TM.triggerHitStop();
+
+        // If the entity can be damaged, the damage is taken and knockback is applied
+        if (canBeHit && health > 0)
+        {
+            anim.SetTrigger("Hit");
+
+            effectScript.SpawnRand();
+
+            health--;
+            // Triggers the camShake script
+            camShakeScript.triggerShake();
+
+            if (type == entityType.Enemy)
+            {
+                GameObject.FindGameObjectWithTag("luckManager").GetComponent<ComboManager>().enemyDowned();
+
+                other = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+            }
+
+            StartCoroutine(knockbackHeavy(knockbackTime, other));
+            StartCoroutine(stunTime(stunnedTime * 2));
+            StartCoroutine(damageFlash(flashTime));
+
+            if (!down && health <= 0)
+            {
+                down = true;
+
+                if (type == entityType.Enemy)
+                {
+                    GameObject.FindGameObjectWithTag("luckManager").GetComponent<luckManager>().downedEnemy();
+                    GameObject.FindGameObjectWithTag("luckManager").GetComponent<ComboManager>().enemyDowned();
+                    Debug.Log("Ouch I've been downed");
+                }
+
+                if (type == entityType.Player)
+                {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInputs>().enabled = false;
+                    anim.SetTrigger("Downed");
+                }
+            }
+
+            if (other.transform.position.x < transform.position.x)
+            {
+                facingRight = false;
+            }
+            else
+            {
+                facingRight = true;
+            }
+        }
+
+        #endregion
+        //StartCoroutine(hitStop(hitStopTime));
+    }
+
+
     // Knockback IEnumerator
 
     // Handles stopping the time for a second
@@ -203,6 +280,19 @@ public class Entity : MonoBehaviour
 
         rb.velocity = Vector3.zero;
     }
+
+    public IEnumerator knockbackHeavy(float hitTime, Rigidbody2D other)
+    {
+        Debug.Log(other);
+
+        rb.velocity = (rb.position - other.position).normalized * knockbackSpeed;
+
+        yield return new WaitForSecondsRealtime(hitTime * 2);
+
+        rb.velocity = Vector3.zero;
+    }
+
+
 
     // Stun IEnumerator
     public IEnumerator stunTime(float hitTime)

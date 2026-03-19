@@ -74,6 +74,43 @@ public class MeleeAttack : MonoBehaviour
                 break;
         }
 
+        #endregion
+
+    }
+
+    public void attackHeavy()
+    {
+        Collider2D[] hit = Physics2D.OverlapCircleAll(attackSpot.position, attackRange, targetLayer);
+
+        for (int i = 0; i < hit.Length; i++)
+        {
+            if (hit[i].GetComponent<Entity>() != null)
+            {
+                hit[i].GetComponent<Entity>().takeDamageHeavy(rb);
+                lastHit = hit[i].GetComponent<Entity>();
+                effectScript.spawnOneEffect(punchEffectIndex, punchEffectSpawnIndex);
+            }
+        }
+
+        // For playing a random option out of 3 different attack sounds
+        #region play a sound from a selection
+        int rand = Random.Range(0, 2);
+
+        switch (rand)
+        {
+            case 0:
+                AM.Play("Punch1");
+                break;
+            case 1:
+                AM.Play("Punch2");
+                break;
+            case 2:
+                AM.Play("Punch3");
+                break;
+        }
+
+        #endregion
+
     }
 
 
@@ -89,8 +126,6 @@ public class MeleeAttack : MonoBehaviour
             attackSpot.position = leftAndRightSpots[1].position;
         }
     }
-
-    #endregion
 
     #endregion
 

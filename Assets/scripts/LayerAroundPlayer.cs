@@ -8,6 +8,7 @@ public class LayerAroundPlayer : MonoBehaviour
     private Transform Player;
     [SerializeField]
     private SpriteRenderer spriteRenderer;
+    public bool useAttatchedRenderer = true;
     #endregion
 
     #region methods
@@ -15,6 +16,7 @@ public class LayerAroundPlayer : MonoBehaviour
     private void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
+        if(useAttatchedRenderer)
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 

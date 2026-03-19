@@ -10,16 +10,19 @@ public class TrainHazard : MonoBehaviour
     public GameObject train;
     public float warningTime;
 
+    public GameObject[] warnings;
+
     public void FixedUpdate()
     {
         if (active)
         {
-            if (trainTimer == 0)
+            if (trainTimer <= 0)
             {
-                StartCoroutine("trainSpawn", warningTime);
+                StartCoroutine(trainSpawn(warningTime));
+                trainTimer = trainTime;
             } else
             {
-                trainTimer -= Time.deltaTime;
+                trainTimer -= Time.fixedDeltaTime;
             }
         }    
     }
@@ -31,17 +34,19 @@ public class TrainHazard : MonoBehaviour
             // Warning Triangles 
             // Low level cam shake
 
+            warnings[rand].SetActive(true);
+
             // Trains will be treated as projectiles 
             yield return new WaitForSeconds(warningTime);
+
+            warnings[rand].SetActive(false);
+
             if (rand == 0)
             {
                 Instantiate(train, trainSpots[0].position, trainSpots[0].rotation);
-            }
-            else
+            } else
             {
                 Instantiate(train, trainSpots[1].position, trainSpots[1].rotation);
             }
-
-            trainTimer = trainTime;
         }
 }

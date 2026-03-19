@@ -118,8 +118,9 @@ public class PlayerInputs : MonoBehaviour
         // if (playercontrol.canPerformActions || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") && !levelEnded) add this back for one punch
         if (playercontrol.canPerformActions || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") && !levelEnded)
             attackScript.onPunch();
-
-        if (playercontrol.canPerformActions || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR") && !levelEnded)
+        else if (playercontrol.canPerformActions || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR") && !levelEnded)
+            attackScript.onPunch();
+        else if (playercontrol.canPerformActions || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("Kick 1") && !levelEnded)
             attackScript.onPunch();
     }
 
