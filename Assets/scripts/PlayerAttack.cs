@@ -90,7 +90,7 @@ public class PlayerAttack : MonoBehaviour
                     break;
                 case 2:
                     animScript.anim.SetTrigger("Kick");
-                    attackCount++;
+                    attackCount = 0;
                     break;
             }
 
@@ -129,6 +129,7 @@ public class PlayerAttack : MonoBehaviour
         attackCooldown = true;
 
         yield return new WaitForSeconds(coolDownTime);
+        attackCount = 0;
         attackCooldown = false;
     }
 
