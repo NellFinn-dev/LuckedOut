@@ -205,6 +205,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 1532747290319735346}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!1 &2888324549302126502
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1532747290319735346}
   renderer: {fileID: 1770909138439294751}
-  health: 10
+  health: 6
   canBeHit: 1
   knockbackSpeed: 15
   knockbackTime: 0.2
@@ -734,6 +735,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 1532747290319735346}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!1 &7091420914748418798
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +910,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 1532747290319735346}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!1001 &3748849835829145473
 PrefabInstance:
   m_ObjectHideFlags: 0

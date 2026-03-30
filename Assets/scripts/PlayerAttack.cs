@@ -76,7 +76,7 @@ public class PlayerAttack : MonoBehaviour
     // if the punching is happening then the tirggers for punching will be set
     public void onPunch()
     {
-        if (!attackCooldown)
+        if (!attackCooldown && attackCount < 3)
         {
             switch (attackCount)
             {
@@ -96,32 +96,22 @@ public class PlayerAttack : MonoBehaviour
 
             if (attackCount >= 3)
             {
-                attackCount = 0;
                 StartCoroutine(coolDown(coolDownTime));
             }
 
             delayTimer = allowedDelay;
         }
+    }
 
-        // Checking if animations are playing to do combo stuff
-        /*
-        if (animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL"))
-        {
-            animScript.anim.SetTrigger("PunchR"); 
-        } 
-        else if (animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR"))
-        {
-            animScript.anim.SetTrigger("Kick");
-        }
+    public void attackCancel()
+    {
+        Debug.Log("Attack Canceled");
+        animScript.anim.ResetTrigger("PunchL");
+        animScript.anim.ResetTrigger("PunchR");
+        animScript.anim.ResetTrigger("Kick");
 
-        if (!animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") && !animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR") 
-            && !animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("Kick 1"))
-        { 
-            animScript.anim.SetTrigger("PunchL");
-        }
-        */
-
-        //else (for just two punches delete the next if)
+        animScript.anim.SetBool("Dashing", true);
+        attackCount = 0;
     }
 
     public IEnumerator coolDown(float coolDownTime)

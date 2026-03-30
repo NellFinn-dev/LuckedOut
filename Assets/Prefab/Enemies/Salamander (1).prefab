@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3074094776929910904}
   renderer: {fileID: 8543339989374495850}
-  health: 10
+  health: 6
   canBeHit: 1
   knockbackSpeed: 15
   knockbackTime: 0.1
@@ -309,6 +309,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 3074094776929910904}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!1 &3668764495535141212
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +704,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 3074094776929910904}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!1 &6350795663425890469
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +879,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 3074094776929910904}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!1 &7571036513520408400
 GameObject:
   m_ObjectHideFlags: 0

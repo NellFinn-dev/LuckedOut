@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3141012104730820684}
   renderer: {fileID: 2173790058558332891}
-  health: 5
+  health: 4
   canBeHit: 1
   knockbackSpeed: 15
   knockbackTime: 0.2
@@ -616,6 +616,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 3141012104730820684}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!1 &7403983586609915753
 GameObject:
   m_ObjectHideFlags: 0

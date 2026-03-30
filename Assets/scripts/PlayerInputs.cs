@@ -80,7 +80,7 @@ public class PlayerInputs : MonoBehaviour
 
         restarting = playerControls.Player.Restart.IsPressed();
 
-        if (playercontrol.canPerformActions && !levelEnded)
+        if ( playercontrol.canPerformActions &&  !levelEnded)
         {
             moveDirection = move.ReadValue<Vector2>().normalized;
 
@@ -126,7 +126,7 @@ public class PlayerInputs : MonoBehaviour
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if (playercontrol.canPerformActions && !levelEnded)
+        if (playercontrol.entityScript.health > 0 && playercontrol.entityScript.stunned == false && !levelEnded)
         {
             movementScript.StartCoroutine("DashEvent", movementScript.dashTime);
         }

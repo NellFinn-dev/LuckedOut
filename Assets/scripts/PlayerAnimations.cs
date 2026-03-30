@@ -37,6 +37,12 @@ public class PlayerAnimations : MonoBehaviour
 
     private void Update()
     {
+        
+        if(playerScript.entityScript.health <= 0)
+        {
+            anim.SetTrigger("Downed");
+        }
+
         // Movment input animation control
         if(inputScript.moveDirection.x != 0 || inputScript.moveDirection.y != 0)
         {

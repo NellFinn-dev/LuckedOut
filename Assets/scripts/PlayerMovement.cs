@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     public bool dashing;
     public GameObject[] dashEffects;
 
+    public PlayerAttack attackScript;
+
     // For sounds
     public AudioManager AM;
 
@@ -35,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         rb = playercontrol.rb;
         // Getting reference for the AudioManager
         AM = GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
+        attackScript = GameObject.FindObjectOfType<PlayerAttack>().GetComponent<PlayerAttack>();
     }
 
     #endregion
@@ -69,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
     public IEnumerator DashEvent (float dashTime)
     {
         dashing = true;
+
+        attackScript.attackCancel();
 
         for (int i = 0; i < dashEffects.Length; i++)
         {
