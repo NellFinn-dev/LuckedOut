@@ -29,7 +29,7 @@ public class VerticalSelectionMenu : MonoBehaviour
     public float lerpSpeed = 15f;
     public float idleAlpha = 0.5f;
 
-    private int _selectedIndex = 0;
+    public int _selectedIndex = 0;
     private RectTransform[] _items;
 
     private void OnEnable()
@@ -57,24 +57,18 @@ public class VerticalSelectionMenu : MonoBehaviour
         {
             bool isSelected = (i == _selectedIndex);
 
-            // 1. FIXED Position Logic
-            // targetY is now fixed: it doesn't change when the selection moves
             float targetY = (i * -verticalSpacing) + topOffset;
 
-            // Only the X changes based on selection
             float targetX = isSelected ? (horizontalOffset + selectedXShift) : horizontalOffset;
 
             Vector2 targetPos = new Vector2(targetX, targetY);
             _items[i].anchoredPosition = Vector2.Lerp(_items[i].anchoredPosition, targetPos, Time.deltaTime * lerpSpeed);
 
-            // 2. Alpha Logic
             float targetA = isSelected ? 1.0f : idleAlpha;
             _items[i].GetComponent<CanvasGroup>().alpha = Mathf.Lerp(_items[i].GetComponent<CanvasGroup>().alpha, targetA, Time.deltaTime * lerpSpeed);
 
-            // 3. Pointer Logic
             if (isSelected && pointerIcon != null)
             {
-                // Pointer matches the item's fixed Y and follows its shifted X
                 Vector2 pointerTarget = targetPos + pointerOffset;
                 pointerIcon.anchoredPosition = Vector2.Lerp(pointerIcon.anchoredPosition, pointerTarget, Time.deltaTime * lerpSpeed);
             }
@@ -83,7 +77,6 @@ public class VerticalSelectionMenu : MonoBehaviour
 
     private void HandleInput()
     {
-        // Check for "WasPressedThisFrame" to prevent rapid scrolling
         if (moveAction.action.WasPressedThisFrame())
         {
             Vector2 input = moveAction.action.ReadValue<Vector2>();
@@ -94,6 +87,14 @@ public class VerticalSelectionMenu : MonoBehaviour
         if (submitAction.action.WasPressedThisFrame())
         {
             Debug.Log("Confirmed: " + _items[_selectedIndex].name);
+        }
+    }
+
+    public void Select()
+    {
+        if(_selectedIndex == 0)
+        {
+            Debug.Log("Play");
         }
     }
 }
