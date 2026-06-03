@@ -5,6 +5,7 @@ using UnityEngine.InputSystem; // Required namespace
 
 public class ControllerRumble : MonoBehaviour
 {
+    #region variables
     // Amplitude values range from 0.0f to 1.0f
     public float lowFrequencyMotorSpeed = 0.1f;
     public float highFrequencyMotorSpeed = 0.1f;
@@ -13,7 +14,9 @@ public class ControllerRumble : MonoBehaviour
     public float highFrequencyMotorSpeedHigher = 1f;
 
     public float rumbleDuration = 0.05f; // Duration in seconds
+    #endregion
 
+    #region methods
     public void callRumble(bool high)
     {
         // Check if a gamepad is currently connected
@@ -55,4 +58,5 @@ public class ControllerRumble : MonoBehaviour
         // Set speeds back to zero to stop the vibration
         Gamepad.current.SetMotorSpeeds(0f, 0f);
     }
+    #endregion
 }

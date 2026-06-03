@@ -38,7 +38,7 @@ public class RangedEnemy : Entity
  
     #endregion
 
-    #region default functions
+    #region Unity functions
 
     private void Awake()
     {

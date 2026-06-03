@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoulleteAttack : MonoBehaviour 
 { 
+    #region variables
     [Header("Spawn Settings")]
     public float spawnXMin = -8f;
     public float spawnXMax = 8f;
@@ -28,6 +29,9 @@ public class RoulleteAttack : MonoBehaviour
     private Vector2 landingPoint;
     private Rigidbody2D rb;
     public CameraShakeScript shakeScript;
+    #endregion
+
+    #region Unity Functions
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -65,21 +69,6 @@ public class RoulleteAttack : MonoBehaviour
         }
     }
 
-    void HandleDrop()
-    {
-        transform.position = Vector2.MoveTowards(
-            transform.position,
-            landingPoint,
-            dropSpeed * Time.deltaTime
-        );
-
-        if (Vector2.Distance(transform.position, landingPoint) < 0.1f)
-        {
-            hasLanded = true;
-            PickNewDirection();
-        }
-    }
-
     void FixedUpdate()
     {
         if (hasLanded)
@@ -88,13 +77,7 @@ public class RoulleteAttack : MonoBehaviour
         }
     }
 
-    void PickNewDirection()
-    {
-        moveDir = Random.insideUnitCircle.normalized;
-        shakeScript.triggerShake();
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
+       void OnCollisionEnter2D(Collision2D collision)
     {
         if (((1 << collision.gameObject.layer) & wallLayer) != 0 && hasLanded)
         {
@@ -111,6 +94,29 @@ public class RoulleteAttack : MonoBehaviour
             }
         }
     }
-}
+    #endregion
 
+    #region methods
+    void HandleDrop()
+    {
+        transform.position = Vector2.MoveTowards(
+            transform.position,
+            landingPoint,
+            dropSpeed * Time.deltaTime
+        );
+
+        if (Vector2.Distance(transform.position, landingPoint) < 0.1f)
+        {
+            hasLanded = true;
+            PickNewDirection();
+        }
+    }
+
+    void PickNewDirection()
+    {
+        moveDir = Random.insideUnitCircle.normalized;
+        shakeScript.triggerShake();
+    }
+    #endregion
+}
 

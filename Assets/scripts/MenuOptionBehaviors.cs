@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class MenuOptionBehaviors : MonoBehaviour
 {
+    #region variables
     public enum menuOption { SwitchScreen, ChangeScene, VolumeOption, FullscreenOption, Exit};
     public menuOption option;
     public VerticalSelectionMenu menu;
@@ -24,11 +25,9 @@ public class MenuOptionBehaviors : MonoBehaviour
     public InputActionProperty volumeDownAction;
 
     public bool selected;
+    #endregion
 
-    void Update()
-    {
-          
-    }
+    #region methods
 
     public void ActionCalled()
     {
@@ -73,5 +72,7 @@ public class MenuOptionBehaviors : MonoBehaviour
     {
         Application.Quit();
     }
+
+    #endregion
 
 }

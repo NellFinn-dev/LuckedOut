@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Background_Scroll : MonoBehaviour
 {
-
+    #region variables
     public float ScrollSpeed = -0.5f;
     public Vector2 _savedOffset;
     public Renderer _renderer;
+    #endregion
+
+    #region methods
 
     private void Start()
     {
@@ -26,4 +29,5 @@ public class Background_Scroll : MonoBehaviour
     {
         _renderer.material.mainTextureOffset = _savedOffset;
     }
+    #endregion
 }

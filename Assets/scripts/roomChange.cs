@@ -25,7 +25,6 @@ public class roomChange : MonoBehaviour
     #endregion
 
     #region methods 
-
     private void Awake()
     {
         roomTransitionAnim = GameObject.FindGameObjectWithTag("RoomTransition").GetComponent<Animator>();
@@ -79,8 +78,9 @@ public class roomChange : MonoBehaviour
             }
         }
     }
+    #endregion
 }
 
-        #endregion
+        
 
     

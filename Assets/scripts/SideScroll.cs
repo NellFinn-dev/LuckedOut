@@ -10,6 +10,7 @@ public class SideScroll : MonoBehaviour
     public Renderer _renderer;
     #endregion
 
+    #region methods
     private void Start()
     {
         _renderer = GetComponent<Renderer>();
@@ -27,4 +28,6 @@ public class SideScroll : MonoBehaviour
     {
         _renderer.material.mainTextureOffset = _savedOffset;
     }
+
+    #endregion
 }

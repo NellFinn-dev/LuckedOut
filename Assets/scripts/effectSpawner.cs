@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class effectSpawner : MonoBehaviour
 {
+    #region variables
     public Entity entityScript;
     public GameObject[] hitEffectsRand;
     public Transform[] hitEffectSpawns;
 
     public GameObject[] hitEffectsSpecific;
+    #endregion
 
+    #region methods
     public void SpawnRand()
     {
         // Rotating the hit spots
@@ -60,4 +63,5 @@ public class effectSpawner : MonoBehaviour
         Instantiate(hitEffectsSpecific[effectIndex], hitEffectSpawns[spotIndex].position, hitEffectSpawns[spotIndex].rotation);
         
     }
+    #endregion
 }

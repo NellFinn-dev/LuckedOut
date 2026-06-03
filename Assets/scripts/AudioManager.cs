@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
     // Instance variable
     public Sound[] sounds;
 
+
+    #region methods
     // On Awake
     void Awake()
     {
@@ -18,18 +20,6 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
         }
     }
-
-    /*
-    // Keeping pitch and volume updated
-    void soundUpdate()
-    {
-        foreach (Sound s in sounds)
-        {
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-        }
-    }
-    */
 
     // Does what it says it does
     public void Play (string name)
@@ -57,4 +47,5 @@ public class AudioManager : MonoBehaviour
         }
         //s.source.pitch = pitch;
     }
+    #endregion
 }

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    #region variables
     public float Speed;
     public Rigidbody2D rb;
     public float Timer;
     public float TimeAmmount;
     public bool destroys;
+    #endregion
+
+    #region methods
     public void Start()
     {
         Timer = TimeAmmount;
@@ -33,4 +37,5 @@ public class Bullet : MonoBehaviour
 
         //transform.position += transform.up * Speed;
     }
+    #endregion
 }

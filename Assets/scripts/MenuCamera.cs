@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class MenuCamera : MonoBehaviour
 {
+    #region variables
     [Header("Mouse Panning")]
     public float mousePanAmount = 2.5f;
     public float smoothSpeed = 3f;
@@ -15,7 +16,9 @@ public class MenuCamera : MonoBehaviour
     public Canvas menuCanvas;    
 
     private Quaternion startRotation;
+    #endregion
 
+    #region methods
     void Start()
     {
         startRotation = transform.localRotation;
@@ -43,4 +46,5 @@ public class MenuCamera : MonoBehaviour
         Quaternion targetRotation = startRotation * mouseOffset * selectionOffset;
         transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, Time.deltaTime * smoothSpeed);
     }
+    #endregion
 }
