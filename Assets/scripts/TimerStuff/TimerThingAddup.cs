@@ -5,6 +5,7 @@ using TMPro;
 
 public class TimerThingAddup : MonoBehaviour
 {
+    #region instance variables
     public bool On;
     public TextMeshProUGUI Timetxt;
     public TextMeshProUGUI BestCombo;
@@ -12,10 +13,11 @@ public class TimerThingAddup : MonoBehaviour
     public float ammount;
     [SerializeField]
     private FloatSO _Time;
-
     public int timeInt;
     public int bestTimeInt;
+    #endregion
 
+    #region methods
     // Displays text for the scoring
     private void OnEnable()
     {
@@ -30,5 +32,6 @@ public class TimerThingAddup : MonoBehaviour
         BestCombo.text = "" + _Time.BestCombo;
         BestTime.text = "" + (int)_Time.BestTime + "s";
     }
+    #endregion
 
 }

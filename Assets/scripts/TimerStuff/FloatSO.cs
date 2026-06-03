@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class FloatSO : ScriptableObject
 {
+    #region instance variables
     [SerializeField]
     private float _Time;
 
@@ -16,6 +17,9 @@ public class FloatSO : ScriptableObject
 
     [SerializeField]
     private float _BestCombo;
+    #endregion
+
+    #region methods
 
     public float Time
     {
@@ -40,5 +44,7 @@ public class FloatSO : ScriptableObject
         get { return _BestCombo; }
         set { _BestCombo = value; }
     }
+
+    #endregion
 
 }

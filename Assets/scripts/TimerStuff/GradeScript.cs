@@ -5,6 +5,7 @@ using TMPro;
 
 public class GradeScript : MonoBehaviour
 {
+    #region instance variables
     [SerializeField]
     private FloatSO _Scores;
 
@@ -13,6 +14,8 @@ public class GradeScript : MonoBehaviour
     public float TotalPoints;
 
     public TextMeshProUGUI text;
+
+    #endregion
 
     // End Screen grading text
     public void Grade()

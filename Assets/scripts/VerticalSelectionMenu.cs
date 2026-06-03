@@ -35,6 +35,7 @@ public class VerticalSelectionMenu : MonoBehaviour
 
     public int selectedIndex = 0;
     private RectTransform[] items;
+    public bool inputEnabled;
 
     [Tooltip("Checks this if this is the starting screen.")]
     public bool startingScreen;
@@ -56,8 +57,16 @@ public class VerticalSelectionMenu : MonoBehaviour
 
     public void OnEnable()
     {
+        StartCoroutine(startInput());
+    }
+
+    public IEnumerator startInput()
+    {
+        yield return new WaitForSeconds(0.1f);
+        //resetPosition();
         moveAction.action.Enable();
         submitAction.action.Enable();
+        inputEnabled = true;
     }
 
     public void OnDisable()

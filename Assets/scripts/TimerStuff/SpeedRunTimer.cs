@@ -7,6 +7,7 @@ using Debug = UnityEngine.Debug;
 
 public class SpeedRunTimer : MonoBehaviour
 {
+    #region instance variables
     public float timer;
     public string TimeString;
     public TextMeshProUGUI Text;
@@ -14,14 +15,13 @@ public class SpeedRunTimer : MonoBehaviour
     [SerializeField]
     private FloatSO _Time;
     public PlayerInputs Controller;
-
     public bool TimedOut;
     public bool timedLevel;
-
     public bool isRunning;
-
     private Stopwatch stopwatch = new Stopwatch();
+    #endregion
 
+    #region methods
     private void Start()
     {
         StartStopwatch();
@@ -53,23 +53,6 @@ public class SpeedRunTimer : MonoBehaviour
             Text.text = TimeString;
             _Time.Time = Time.timeSinceLevelLoad;
         }
-
-
-
-        /*
-
-        if (Time.timeSinceLevelLoad >= 60)
-        {
-            Text.text = "60.0";
-        }
-
-            if (Time.timeSinceLevelLoad >= 60 && TimedOut != true)
-        {
-            TimedOut = true;
-            Controller.anim.SetTrigger("TimerOver");
-            Controller.Stunned = true;
-        }
-        */
     }
 
     // Called at the end of the 
@@ -80,4 +63,5 @@ public class SpeedRunTimer : MonoBehaviour
             _Time.BestTime = _Time.Time;
         }
     }
+    #endregion
 }
