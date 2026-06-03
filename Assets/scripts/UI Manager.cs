@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    #region variables
+    
     // Used for the darkening of the screen
     [Header("Roll mechanics")]
     public Animator darkenScreenAnim;
@@ -16,7 +18,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Time control")]
     public float timeChangeRate;
-
+    #endregion
+    #region methods
     public void DarkenScreenToggle(bool darken)
     {
         // Used to toggle the screen darkening effect
@@ -59,5 +62,5 @@ public class UIManager : MonoBehaviour
         GameObject.FindObjectOfType<PlayerInputs>().GetComponent<PlayerInputs>().enabled = false; // Disables the player input script
         //Time.timeScale = 0;
     }
-
+    #endregion
 }

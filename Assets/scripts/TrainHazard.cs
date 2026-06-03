@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrainHazard : MonoBehaviour
 {
+    #region variables
     public float trainTimer, trainTime;
     public bool active;
     public Transform[] trainSpots;
@@ -11,7 +12,8 @@ public class TrainHazard : MonoBehaviour
     public float warningTime;
 
     public GameObject[] warnings;
-
+    #endregion
+    #region Unity Methods
     public void FixedUpdate()
     {
         if (active)
@@ -26,7 +28,8 @@ public class TrainHazard : MonoBehaviour
             }
         }    
     }
-
+    #endregion
+    #region methods
         public IEnumerator trainSpawn (float warningTime)
         {
             int rand = Random.Range(0, 2);
@@ -49,4 +52,5 @@ public class TrainHazard : MonoBehaviour
                 Instantiate(train, trainSpots[1].position, trainSpots[1].rotation);
             }
         }
+    #endregion
 }

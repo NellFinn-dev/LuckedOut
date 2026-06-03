@@ -3,6 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class Sound 
 {
+    #region variables
     public string name;
     public AudioClip Clip;
     [Range(0f, 1f)]
@@ -12,6 +13,7 @@ public class Sound
     public bool loop = false;
     [HideInInspector]
     public AudioSource source;
+    #endregion
 
     public void Play()
     {

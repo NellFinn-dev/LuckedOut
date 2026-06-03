@@ -89,6 +89,24 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Left Selection"",
+                    ""type"": ""Button"",
+                    ""id"": ""7473a1f4-00c0-4c28-9f8a-9f5db4c61567"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Right Selection"",
+                    ""type"": ""Button"",
+                    ""id"": ""47f11124-68bd-4d11-adc2-97e5744e9768"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -355,6 +373,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Restart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""092f54bc-2536-460a-a5f7-08a58a0eb98e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Left Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aae4ec4d-980c-4864-b360-2d6a983686e9"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Right Selection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -431,6 +471,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Start = m_Player.FindAction("Start", throwIfNotFound: true);
         m_Player_SlotMachine = m_Player.FindAction("SlotMachine", throwIfNotFound: true);
         m_Player_Restart = m_Player.FindAction("Restart", throwIfNotFound: true);
+        m_Player_LeftSelection = m_Player.FindAction("Left Selection", throwIfNotFound: true);
+        m_Player_RightSelection = m_Player.FindAction("Right Selection", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -499,6 +541,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Start;
     private readonly InputAction m_Player_SlotMachine;
     private readonly InputAction m_Player_Restart;
+    private readonly InputAction m_Player_LeftSelection;
+    private readonly InputAction m_Player_RightSelection;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -510,6 +554,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Start => m_Wrapper.m_Player_Start;
         public InputAction @SlotMachine => m_Wrapper.m_Player_SlotMachine;
         public InputAction @Restart => m_Wrapper.m_Player_Restart;
+        public InputAction @LeftSelection => m_Wrapper.m_Player_LeftSelection;
+        public InputAction @RightSelection => m_Wrapper.m_Player_RightSelection;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -540,6 +586,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Restart.started += instance.OnRestart;
             @Restart.performed += instance.OnRestart;
             @Restart.canceled += instance.OnRestart;
+            @LeftSelection.started += instance.OnLeftSelection;
+            @LeftSelection.performed += instance.OnLeftSelection;
+            @LeftSelection.canceled += instance.OnLeftSelection;
+            @RightSelection.started += instance.OnRightSelection;
+            @RightSelection.performed += instance.OnRightSelection;
+            @RightSelection.canceled += instance.OnRightSelection;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -565,6 +617,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Restart.started -= instance.OnRestart;
             @Restart.performed -= instance.OnRestart;
             @Restart.canceled -= instance.OnRestart;
+            @LeftSelection.started -= instance.OnLeftSelection;
+            @LeftSelection.performed -= instance.OnLeftSelection;
+            @LeftSelection.canceled -= instance.OnLeftSelection;
+            @RightSelection.started -= instance.OnRightSelection;
+            @RightSelection.performed -= instance.OnRightSelection;
+            @RightSelection.canceled -= instance.OnRightSelection;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -636,5 +694,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnStart(InputAction.CallbackContext context);
         void OnSlotMachine(InputAction.CallbackContext context);
         void OnRestart(InputAction.CallbackContext context);
+        void OnLeftSelection(InputAction.CallbackContext context);
+        void OnRightSelection(InputAction.CallbackContext context);
     }
 }

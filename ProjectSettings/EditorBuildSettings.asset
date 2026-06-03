@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Casino/Casino Current.unity
     guid: a014f2c1364504744b0a4986aad58005
   - enabled: 1
-    path: Assets/End.unity
-    guid: b297995007478dc4fade5885ef17a1aa
-  - enabled: 1
     path: Assets/Scenes/Train Station.unity
     guid: 11fc3e24df66b344bb504576e947e312
+  - enabled: 1
+    path: Assets/End.unity
+    guid: b297995007478dc4fade5885ef17a1aa
   m_configObjects: {}

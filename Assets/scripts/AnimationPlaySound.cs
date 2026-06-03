@@ -18,7 +18,7 @@ public class AnimationPlaySound : MonoBehaviour
     {
         // Getting reference for the AudioManager
         AM = GameObject.FindObjectOfType<AudioManager>().GetComponent<AudioManager>();
-    }
+    } 
 
     public void playSound(string name)
     {
@@ -29,6 +29,6 @@ public class AnimationPlaySound : MonoBehaviour
     {
         AM.Stop(name);
     }
-
+    
     #endregion
 }

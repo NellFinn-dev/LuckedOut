@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class VerticalSelectionMenu : MonoBehaviour
 {
+    #region Variables
+    // This script manages the vertical selection for menu options in the main menu
+    // It is applied to each different menu screen (The main one and the level selection one)
+
     [Header("Input Actions")]
     public InputActionProperty moveAction;
     public InputActionProperty submitAction;
@@ -29,43 +33,95 @@ public class VerticalSelectionMenu : MonoBehaviour
     public float lerpSpeed = 15f;
     public float idleAlpha = 0.5f;
 
-    public int _selectedIndex = 0;
-    private RectTransform[] _items;
+    public int selectedIndex = 0;
+    private RectTransform[] items;
 
-    private void OnEnable()
+    [Tooltip("Checks this if this is the starting screen.")]
+    public bool startingScreen;
+    #endregion
+    #region Unity Methods
+
+    void Awake()
+    {
+        if (startingScreen) selectedIndex = 0;
+
+        items = new RectTransform[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            items[i] = transform.GetChild(i) as RectTransform;
+            if (!items[i].GetComponent<CanvasGroup>())
+                items[i].gameObject.AddComponent<CanvasGroup>();
+        }
+    }
+
+    public void OnEnable()
     {
         moveAction.action.Enable();
         submitAction.action.Enable();
     }
 
-    void Start()
+    public void OnDisable()
     {
-        _items = new RectTransform[transform.childCount];
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            _items[i] = transform.GetChild(i) as RectTransform;
-            if (!_items[i].GetComponent<CanvasGroup>())
-                _items[i].gameObject.AddComponent<CanvasGroup>();
-        }
+        moveAction.action.Disable();
+        submitAction.action.Disable();
     }
 
     void Update()
     {
         HandleInput();
 
-        for (int i = 0; i < _items.Length; i++)
+        updatePositions();
+
+        for(int i = 0; i < items.Length; i++)
         {
-            bool isSelected = (i == _selectedIndex);
+            if(items[i].GetComponent<MenuOptionBehaviors>() != null)
+            {
+                items[i].GetComponent<MenuOptionBehaviors>().selected = (i == selectedIndex);
+            }
+        }
+    }
+
+    #endregion
+    #region Visuals
+    public void updatePositions()
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            bool isSelected = (i == selectedIndex);
 
             float targetY = (i * -verticalSpacing) + topOffset;
 
             float targetX = isSelected ? (horizontalOffset + selectedXShift) : horizontalOffset;
 
             Vector2 targetPos = new Vector2(targetX, targetY);
-            _items[i].anchoredPosition = Vector2.Lerp(_items[i].anchoredPosition, targetPos, Time.deltaTime * lerpSpeed);
+            items[i].anchoredPosition = Vector2.Lerp(items[i].anchoredPosition, targetPos, Time.deltaTime * lerpSpeed);
 
             float targetA = isSelected ? 1.0f : idleAlpha;
-            _items[i].GetComponent<CanvasGroup>().alpha = Mathf.Lerp(_items[i].GetComponent<CanvasGroup>().alpha, targetA, Time.deltaTime * lerpSpeed);
+            items[i].GetComponent<CanvasGroup>().alpha = Mathf.Lerp(items[i].GetComponent<CanvasGroup>().alpha, targetA, Time.deltaTime * lerpSpeed);
+
+            if (isSelected && pointerIcon != null)
+            {
+                Vector2 pointerTarget = targetPos + pointerOffset;
+                pointerIcon.anchoredPosition = Vector2.Lerp(pointerIcon.anchoredPosition, pointerTarget, Time.deltaTime * lerpSpeed);
+            }
+        }
+    }
+    // This method is used to reset each items position when the menu is loaded back up. It's just for nice visual effect
+    public void resetPosition()
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            bool isSelected = (i == selectedIndex);
+
+            float targetY = (i * -verticalSpacing) + topOffset;
+
+            float targetX = isSelected ? (horizontalOffset + selectedXShift) : horizontalOffset;
+
+            Vector2 targetPos = new Vector2(targetX, targetY);
+            items[i].anchoredPosition = targetPos;
+
+            float targetA = isSelected ? 1.0f : idleAlpha;
+            items[i].GetComponent<CanvasGroup>().alpha = Mathf.Lerp(items[i].GetComponent<CanvasGroup>().alpha, targetA, Time.deltaTime * lerpSpeed);
 
             if (isSelected && pointerIcon != null)
             {
@@ -75,26 +131,39 @@ public class VerticalSelectionMenu : MonoBehaviour
         }
     }
 
+        public IEnumerator menuReset()
+    {
+        selectedIndex = -1;
+        resetPosition();
+
+
+        yield return new WaitForSeconds(0.25f);
+        selectedIndex = 0;
+    }
+    #endregion  
+    #region Input
     private void HandleInput()
     {
         if (moveAction.action.WasPressedThisFrame())
         {
             Vector2 input = moveAction.action.ReadValue<Vector2>();
-            if (input.y > 0.5f) _selectedIndex = Mathf.Max(0, _selectedIndex - 1);
-            else if (input.y < -0.5f) _selectedIndex = Mathf.Min(_items.Length - 1, _selectedIndex + 1);
+            if (input.y > 0.5f) selectedIndex = Mathf.Max(0, selectedIndex - 1);
+            else if (input.y < -0.5f) selectedIndex = Mathf.Min(items.Length - 1, selectedIndex + 1);
         }
 
         if (submitAction.action.WasPressedThisFrame())
         {
-            Debug.Log("Confirmed: " + _items[_selectedIndex].name);
+            Debug.Log("Confirmed: " + items[selectedIndex].name);
         }
     }
 
     public void Select()
     {
-        if(_selectedIndex == 0)
+        if (submitAction.action.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Play");
+            items[selectedIndex].GetComponent<MenuOptionBehaviors>().ActionCalled(); 
         }
     }
+    
+    #endregion
 }

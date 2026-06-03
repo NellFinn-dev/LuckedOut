@@ -5821,6 +5821,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &495432804 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2825573761907047038, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+  m_PrefabInstance: {fileID: 1440811751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280bab83864dc8c448f209a29c0e5b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &501052763
 GameObject:
   m_ObjectHideFlags: 0
@@ -14327,7 +14338,6 @@ GameObject:
   - component: {fileID: 1181996236}
   - component: {fileID: 1181996239}
   - component: {fileID: 1181996238}
-  - component: {fileID: 1181996240}
   m_Layer: 0
   m_Name: SlotMachineForSpawning
   m_TagString: Untagged
@@ -14400,31 +14410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d806e207e6c6b534bac9013789c1ddc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1181996240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181996235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875326ea0942ca442bc093949e121683, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Luck
-    Clip: {fileID: 8300000, guid: 1f02da19607bbc04a8dbf1116477c5f2, type: 3}
-    volume: 0.194
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Slam
-    Clip: {fileID: 8300000, guid: b1f532516e471124e8917936d3ef9df1, type: 3}
-    volume: 0.06
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
 --- !u!1 &1184055678
 GameObject:
   m_ObjectHideFlags: 0
@@ -16653,6 +16638,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1384815483 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5375315807246575942, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+  m_PrefabInstance: {fileID: 1440811751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1388907141
 GameObject:
   m_ObjectHideFlags: 0
@@ -18068,6 +18058,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1099672715470106682, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: scene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099672715470106682, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: currentScene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576119665481614924, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: AM
+      value: 
+      objectReference: {fileID: 1260001796}
     - target: {fileID: 4560059916155894665, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: leftBound
       value: 
@@ -18100,6 +18102,10 @@ PrefabInstance:
       propertyPath: slotSpawners.Array.data[5]
       value: 
       objectReference: {fileID: 507523463}
+    - target: {fileID: 5144186811555643983, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5547992581289925289, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: m_Name
       value: All the main things (1)
@@ -28267,7 +28273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4224740302716648749}
   renderer: {fileID: 1700881342}
-  health: 20
+  health: 1
   canBeHit: 0
   knockbackSpeed: 20
   knockbackTime: 0.2
@@ -28276,16 +28282,16 @@ MonoBehaviour:
   anim: {fileID: 1700881340}
   type: 0
   down: 0
-  camShakeScript: {fileID: 0}
+  camShakeScript: {fileID: 674976993}
   flashTime: 0.1
   materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   ghostTime: 0
-  effectScript: {fileID: 0}
+  effectScript: {fileID: 495432804}
   facingRight: 0
-  AM: {fileID: 0}
-  TM: {fileID: 0}
+  AM: {fileID: 1260001796}
+  TM: {fileID: 1260001795}
   variablesInsantiated: 0
   speed: 0
   RunSpeed: 5
@@ -28341,6 +28347,7 @@ MonoBehaviour:
   - {fileID: 1909828260}
   - {fileID: 1609859941}
   cardSmoothing: 1
+  gradeScreenTransition: {fileID: 1384815483}
 --- !u!4 &8131856411867676860
 Transform:
   m_ObjectHideFlags: 0
@@ -28373,7 +28380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!195 &8558909296116159282
 NavMeshAgent:
   m_ObjectHideFlags: 0

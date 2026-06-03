@@ -12,11 +12,9 @@ public class Transition : MonoBehaviour
     private int scene;
     [SerializeField]
     private int currentScene;
-
     public bool restart;
-
     #endregion
-
+    
     #region methods
 
     public void transitionTrigger()

@@ -51,6 +51,9 @@ public class CardSharkBossBeh : Entity
     public GameObject spinningCardOb;
     public Transform[] cardPositions; // Position 0 is for the cards normally and position 1 is for if Cardshark can be hit
     public float cardSmoothing;
+
+    public Animator gradeScreenTransition;
+
     #endregion
 
     #region default functions
@@ -93,6 +96,10 @@ public class CardSharkBossBeh : Entity
         if (health <= 0)
         {
             anim.SetTrigger("Down");
+
+            // Scene transition trigger 
+            gradeScreenTransition.SetTrigger("endScreenAnim");
+
             agent.speed = 0;
             return;
         }

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SideScroll : MonoBehaviour
 {
+    #region variables
     public float ScrollSpeed = -0.5f;
     public Vector2 _savedOffset;
     public Renderer _renderer;
+    #endregion
 
     private void Start()
     {

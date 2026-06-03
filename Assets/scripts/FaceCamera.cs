@@ -22,8 +22,7 @@ public class FaceCamera : MonoBehaviour
         if (mainCamera != null)
         {
             // This line makes the object look at the camera's position.
-            transform.LookAt(transform.position + mainCamera.transform.rotation * Vector3.forward,
-                             mainCamera.transform.rotation * Vector3.up);
+            transform.LookAt(transform.position + mainCamera.transform.rotation * Vector3.forward, mainCamera.transform.rotation * Vector3.up);
         }
     }
 }

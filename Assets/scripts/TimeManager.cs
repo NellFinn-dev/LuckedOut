@@ -5,7 +5,7 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     // This script is a time manager for the whole game but will for now just be used for hit stop time manipulation
-
+    #region methods
     public float hitstopTime;
     public void Start()
     {
@@ -30,4 +30,5 @@ public class TimeManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(hitstopTime);
         Time.timeScale = 1f;
     }
+    #endregion
 }
