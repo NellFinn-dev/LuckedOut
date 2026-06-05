@@ -55,7 +55,7 @@ public class RangedEnemy : Entity
             anim.SetTrigger("Down");
             agent.speed = 0;
             return;
-
+        }
 
             var delta = Player.position - transform.position;
             if (!Attacking && active)
@@ -135,7 +135,7 @@ public class RangedEnemy : Entity
 
 
         }
-    }
+    
 
     #endregion
 
@@ -209,4 +209,5 @@ public class RangedEnemy : Entity
     }
 
     #endregion
+
 }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FloatSo
   m_EditorClassIdentifier: 
   _Time: 20.199999
-  _BestTime: 20.199999
+  _BestTime: 20.2
   _Combo: 0
   _BestCombo: 0
