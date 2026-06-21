@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 2.25, z: 0}
-  m_LookaheadTime: 0.439
+  m_LookaheadTime: 0.68
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
   m_XDamping: 1.7
@@ -5362,7 +5362,7 @@ MonoBehaviour:
   m_Follow: {fileID: 674976994}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7.87
+    OrthographicSize: 8.16
     NearClipPlane: 0.7
     FarClipPlane: 1000
     Dutch: 0
@@ -5387,7 +5387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457402706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -82.23, y: 12.19, z: -10}
+  m_LocalPosition: {x: -82.28773, y: 12.050023, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6116,7 +6116,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.87
+  orthographic size: 8.16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6140,7 +6140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -82.23, y: 12.19, z: -10}
+  m_LocalPosition: {x: -82.28773, y: 12.050023, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11747,6 +11747,7 @@ MonoBehaviour:
   levelClearingRoom: 0
   endScreen: {fileID: 0}
   TM: {fileID: 0}
+  nextTrigger: {fileID: 427976845}
 --- !u!4 &978184852
 Transform:
   m_ObjectHideFlags: 0
@@ -12768,6 +12769,7 @@ MonoBehaviour:
   levelClearingRoom: 0
   endScreen: {fileID: 0}
   TM: {fileID: 0}
+  nextTrigger: {fileID: 2064486342}
 --- !u!61 &1066547702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12977,6 +12979,7 @@ MonoBehaviour:
   levelClearingRoom: 0
   endScreen: {fileID: 0}
   TM: {fileID: 0}
+  nextTrigger: {fileID: 36543246}
 --- !u!4 &1069940235
 Transform:
   m_ObjectHideFlags: 0
@@ -17879,7 +17882,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a8fd743cda079774381c6fe6d219cc34, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.123
+  m_Volume: 0.09
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -17987,6 +17990,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 119967458770424842, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: camSwitching
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 119967458770424842, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: camSpots.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -18014,6 +18021,14 @@ PrefabInstance:
       propertyPath: camSpots.Array.data[5]
       value: 
       objectReference: {fileID: 989221285}
+    - target: {fileID: 268312536938382801, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 268312536938382801, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8
+      objectReference: {fileID: 0}
     - target: {fileID: 729359935308795490, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -18068,16 +18083,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2130124646847273229, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.9999734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2130124646847273229, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -192.99997
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 2576119665481614924, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: AM
       value: 
       objectReference: {fileID: 1260001796}
+    - target: {fileID: 2585090157796554316, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 2841479974266042614, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: scene
       value: 0
@@ -18102,6 +18121,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4154445436943125912, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 4252991167924566450, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 4367494776988932549, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: restart
       value: 0
@@ -18138,9 +18165,13 @@ PrefabInstance:
       propertyPath: slotSpawners.Array.data[5]
       value: 
       objectReference: {fileID: 507523463}
+    - target: {fileID: 4942674719680369186, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 5034576674579439786, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: m_fontSize
-      value: 58.54
+      value: 46.64
       objectReference: {fileID: 0}
     - target: {fileID: 5034576674579439786, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: m_fontAsset
@@ -18148,7 +18179,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
     - target: {fileID: 5034576674579439786, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: m_fontSizeBase
-      value: 58.54
+      value: 46.64
       objectReference: {fileID: 0}
     - target: {fileID: 5034576674579439786, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: m_sharedMaterial
@@ -18160,6 +18191,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5144186811555643983, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372029760638407900, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505710887511964452, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: scene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505710887511964452, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: currentScene
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5547992581289925289, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
@@ -18174,6 +18217,14 @@ PrefabInstance:
       propertyPath: darkenScreenAnim
       value: 
       objectReference: {fileID: 1123146426}
+    - target: {fileID: 7432412838449748504, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 7581466021974345277, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20259,6 +20310,7 @@ MonoBehaviour:
   levelClearingRoom: 0
   endScreen: {fileID: 0}
   TM: {fileID: 0}
+  nextTrigger: {fileID: 0}
 --- !u!1 &1590991484
 GameObject:
   m_ObjectHideFlags: 0
@@ -21164,6 +21216,7 @@ MonoBehaviour:
   levelClearingRoom: 0
   endScreen: {fileID: 0}
   TM: {fileID: 0}
+  nextTrigger: {fileID: 61677887}
 --- !u!4 &1639455996
 Transform:
   m_ObjectHideFlags: 0
@@ -28329,7 +28382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4224740302716648749}
   renderer: {fileID: 1700881342}
-  health: 1
+  health: 20
   canBeHit: 0
   knockbackSpeed: 20
   knockbackTime: 0.2

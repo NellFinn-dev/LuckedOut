@@ -41,7 +41,7 @@ public class SpeedRunTimer : MonoBehaviour
     {
 
         timer = Time.timeSinceLevelLoad;
-        TimeString = timer.ToString("f1");
+        TimeString = timer.ToString("f2");
 
         // Displays the timer on the UI
         if (healthscript.health > 0 && Time.timeSinceLevelLoad < 60 && timedLevel)

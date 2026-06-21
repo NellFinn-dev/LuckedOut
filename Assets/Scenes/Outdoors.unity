@@ -638,8 +638,12 @@ MonoBehaviour:
   materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  hitStopTime: 0.2
+  ghostTime: 0
+  effectScript: {fileID: 0}
+  facingRight: 0
   AM: {fileID: 0}
+  TM: {fileID: 0}
+  variablesInsantiated: 0
   speed: 0
   RunSpeed: 7
   Player: {fileID: 1448304501}
@@ -650,7 +654,6 @@ MonoBehaviour:
   AttackTime: 0.8
   Closenes: 0
   Attackspot: {fileID: 1023649039}
-  facingRight: 0
   Animations: {fileID: 1659470555}
   AttackSpeed: 0
   Back: {fileID: 332533558}
@@ -1827,8 +1830,12 @@ MonoBehaviour:
   materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  hitStopTime: 0.2
+  ghostTime: 0
+  effectScript: {fileID: 0}
+  facingRight: 0
   AM: {fileID: 0}
+  TM: {fileID: 0}
+  variablesInsantiated: 0
   speed: 0
   RunSpeed: 7
   Player: {fileID: 1448304501}
@@ -1839,7 +1846,6 @@ MonoBehaviour:
   AttackTime: 0.8
   Closenes: 0
   Attackspot: {fileID: 408996697}
-  facingRight: 0
   Animations: {fileID: 365067679}
   AttackSpeed: 0
   Back: {fileID: 508062551}
@@ -2310,6 +2316,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 272985342}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!50 &562196940
 Rigidbody2D:
   serializedVersion: 4
@@ -2948,6 +2955,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 818844732}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!50 &645960672
 Rigidbody2D:
   serializedVersion: 4
@@ -3440,6 +3448,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 818844732}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!50 &694084522
 Rigidbody2D:
   serializedVersion: 4
@@ -3616,6 +3625,12 @@ MonoBehaviour:
   - 0.2
   - 0.8
   sliderAnim: {fileID: 1862179922}
+  roomManagerscript: {fileID: 0}
+  slotSpawners: []
+  slotmachineSpawned: 0
+  invincibilityTime: 0
+  onePunchTime: 0
+  cardSpin: {fileID: 0}
 --- !u!4 &721808728
 Transform:
   m_ObjectHideFlags: 0
@@ -3661,7 +3676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81feb42262b4a9f4bb5e9a7c87e80467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timer: 0
+  timer: 0
   TimeString: 
   Text: {fileID: 1557023167}
   healthscript: {fileID: 1448304505}
@@ -3669,6 +3684,7 @@ MonoBehaviour:
   Controller: {fileID: 1448304502}
   TimedOut: 0
   timedLevel: 0
+  isRunning: 0
 --- !u!114 &721808731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3687,6 +3703,8 @@ MonoBehaviour:
   timerReset: 3
   scoreScript: {fileID: 11400000, guid: bd15253db322db840a951b5778cf6d96, type: 2}
   Comboanim: {fileID: 721808733}
+  AM: {fileID: 0}
+  currentPitch: 0
 --- !u!114 &721808732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,6 +4763,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 272985342}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!50 &1022631228
 Rigidbody2D:
   serializedVersion: 4
@@ -5560,11 +5579,6 @@ Transform:
   m_Father: {fileID: 1926605679}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1206023118 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 322967724608477082, guid: 8da4b2d34812d88498a14e5d64da1096, type: 3}
-  m_PrefabInstance: {fileID: 903217261}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1207743909
 GameObject:
   m_ObjectHideFlags: 0
@@ -6525,11 +6539,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 322967724608477083, guid: 8da4b2d34812d88498a14e5d64da1096, type: 3}
   m_PrefabInstance: {fileID: 1445467201}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1445467203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 322967724608477082, guid: 8da4b2d34812d88498a14e5d64da1096, type: 3}
-  m_PrefabInstance: {fileID: 1445467201}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1448304497
 GameObject:
   m_ObjectHideFlags: 0
@@ -6599,7 +6608,8 @@ MonoBehaviour:
   playercontrol: {fileID: 1448304504}
   inputScript: {fileID: 1448304502}
   dashing: 0
-  dashEffect: {fileID: 1445467203}
+  dashEffects: []
+  attackScript: {fileID: 0}
   AM: {fileID: 0}
 --- !u!4 &1448304501
 Transform:
@@ -6661,12 +6671,24 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  restart:
+    m_Name: Restart
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: be4b42bf-480f-4d2b-b7ae-b73156f66a86
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   movementScript: {fileID: 1448304500}
   attackScript: {fileID: 1448304503}
   animScript: {fileID: 1926605682}
   playercontrol: {fileID: 1448304504}
   levelEnded: 0
+  restarting: 0
+  restartAnim: {fileID: 0}
   AM: {fileID: 0}
+  entityScript: {fileID: 0}
 --- !u!114 &1448304503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6689,6 +6711,11 @@ MonoBehaviour:
   animScript: {fileID: 1926605682}
   attacking: 0
   inPunch: 0
+  attackCount: 0
+  allowedDelay: 0
+  delayTimer: 0
+  attackCooldown: 0
+  coolDownTime: 0
   AM: {fileID: 0}
 --- !u!114 &1448304504
 MonoBehaviour:
@@ -6738,8 +6765,12 @@ MonoBehaviour:
   materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  hitStopTime: 0.2
+  ghostTime: 0
+  effectScript: {fileID: 0}
+  facingRight: 0
   AM: {fileID: 0}
+  TM: {fileID: 0}
+  variablesInsantiated: 0
 --- !u!61 &1448304506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6838,6 +6869,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 88e57d47-3314-4184-a584-6d493044f2f7
     m_ActionName: Player/Roll[/Keyboard/ctrl]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1110ccb6-b8d9-4a77-84a8-653db443c71a
+    m_ActionName: Player/Start[/Keyboard/enter,/SwitchProControllerHID/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95bb84dc-65ae-4aa1-8343-3d5c6ea41c9c
+    m_ActionName: Player/SlotMachine[/Keyboard/f,/SwitchProControllerHID/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ed76ce9f-6f05-4e02-a6d9-0a95af837a6c
+    m_ActionName: Player/Restart[/Keyboard/escape,/SwitchProControllerHID/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7473a1f4-00c0-4c28-9f8a-9f5db4c61567
+    m_ActionName: Player/Left Selection[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 47f11124-68bd-4d11-adc2-97e5744e9768
+    m_ActionName: Player/Right Selection[/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -7536,6 +7587,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 915884337}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!50 &1619790274
 Rigidbody2D:
   serializedVersion: 4
@@ -8746,6 +8798,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 818844732}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!50 &1897399016
 Rigidbody2D:
   serializedVersion: 4
@@ -9016,9 +9069,10 @@ MonoBehaviour:
   camShake: {fileID: 784929979}
   inputScript: {fileID: 1448304502}
   transitionScript: {fileID: 1426832458}
-  movementParticles:
-  - {fileID: 1206023118}
-  - {fileID: 1445467203}
+  leftParticles: []
+  rightParticles: []
+  playerEntityScript: {fileID: 0}
+  playerColors: []
 --- !u!114 &1926605683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9043,6 +9097,10 @@ MonoBehaviour:
   lastHit: {fileID: 0}
   playerScript: {fileID: 1448304504}
   AM: {fileID: 0}
+  TM: {fileID: 0}
+  effectScript: {fileID: 0}
+  punchEffectIndex: 0
+  punchEffectSpawnIndex: 0
 --- !u!1 &2044602512
 GameObject:
   m_ObjectHideFlags: 0
@@ -9274,6 +9332,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 272985342}
   playerMovementScript: {fileID: 0}
+  oneHit: 0
 --- !u!50 &2085470169
 Rigidbody2D:
   serializedVersion: 4
@@ -9615,8 +9674,12 @@ MonoBehaviour:
   materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  hitStopTime: 0.2
+  ghostTime: 0
+  effectScript: {fileID: 0}
+  facingRight: 0
   AM: {fileID: 0}
+  TM: {fileID: 0}
+  variablesInsantiated: 0
   speed: 0
   RunSpeed: 7
   Player: {fileID: 1448304501}
@@ -9631,7 +9694,6 @@ MonoBehaviour:
   - {fileID: 1045373305}
   - {fileID: 501052764}
   Projectile: {fileID: 1264864275760002938, guid: fa4bec6bef6248d4aafcf05674176a6d, type: 3}
-  facingRight: 0
   Animations: {fileID: 2092574318}
   AttackSpeed: 0
   Back: {fileID: 2096826803}

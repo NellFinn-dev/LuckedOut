@@ -33,28 +33,6 @@ public class CameraShakeScript : MonoBehaviour
     }
 
     // Some math that handles the camera shaking
-    /*
-    IEnumerator Shake(float duration, float magnitude)
-    {
-        Vector3 originalPos = transform.position;
-        float elapse = 0.0f;
-        thing = originalPos;
-
-        while (elapse < duration)
-        {
-            float xPos = Random.Range(originalPos.x -.5f, originalPos.x + .5f) * magnitude;
-            float yPos = Random.Range(originalPos.y - .5f, originalPos.y + .5f) * magnitude;
-
-            transform.position = new Vector3(xPos, yPos, originalPos.z);
-
-            elapse += Time.deltaTime;
-
-            yield return null;
-        }
-
-        transform.localPosition = new Vector2(0, 0);
-    }
-    */
     IEnumerator Shake(float duration, float magnitude)
     {
         Vector3 originalPos = transform.localPosition;

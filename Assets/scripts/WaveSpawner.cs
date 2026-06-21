@@ -32,6 +32,7 @@ public class WaveSpawner : MonoBehaviour
 
     public TimeManager TM;
 
+    public GameObject nextTrigger;
     #endregion
 
     #region methods
@@ -107,6 +108,7 @@ public class WaveSpawner : MonoBehaviour
             {
                 if (!ended && !spawningWave)
                 {
+                    nextTrigger.SetActive(true);
                     endSpawner();
                 }
             }

@@ -734,7 +734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &61677888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -794,9 +794,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies: []
   enemyDowned: 
-  boundaryThisRoom: {fileID: 581284099}
+  boundaryThisRoom: {fileID: 2117951987}
   boundaryNextRoom: {fileID: 447751579}
-  doorOpened: 1
+  doorOpened: 0
   walkedThrough: 0
   teleportingRoom: 1
   nextRoomSpawnpoint: {fileID: 386458429}
@@ -862,8 +862,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61677887}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.22, y: 5.66, z: 0}
-  m_LocalScale: {x: 10.414695, y: 2.5893838, z: 1}
+  m_LocalPosition: {x: 16.3, y: 5.76, z: 0}
+  m_LocalScale: {x: 3.645143, y: 2.5893838, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 116104056}
@@ -4177,6 +4177,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ed76ce9f-6f05-4e02-a6d9-0a95af837a6c
     m_ActionName: Player/Restart[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7473a1f4-00c0-4c28-9f8a-9f5db4c61567
+    m_ActionName: Player/Left Selection[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 47f11124-68bd-4d11-adc2-97e5744e9768
+    m_ActionName: Player/Right Selection[/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -8197,6 +8205,7 @@ MonoBehaviour:
   levelClearingRoom: 1
   endScreen: {fileID: 0}
   TM: {fileID: 0}
+  nextTrigger: {fileID: 1068346368}
 --- !u!1 &610541256
 GameObject:
   m_ObjectHideFlags: 0
@@ -9538,6 +9547,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1099672715470106682, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: scene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099672715470106682, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: currentScene
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2585090157796554316, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: mainCamera
       value: 
@@ -9976,7 +9993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &761758912
 Transform:
   m_ObjectHideFlags: 0
@@ -12070,6 +12087,7 @@ MonoBehaviour:
   levelClearingRoom: 0
   endScreen: {fileID: 0}
   TM: {fileID: 0}
+  nextTrigger: {fileID: 0}
 --- !u!1 &955528320
 GameObject:
   m_ObjectHideFlags: 0
@@ -13906,6 +13924,7 @@ MonoBehaviour:
   levelClearingRoom: 0
   endScreen: {fileID: 0}
   TM: {fileID: 0}
+  nextTrigger: {fileID: 2064486342}
 --- !u!61 &1066547702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14112,9 +14131,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies: []
   enemyDowned: 
-  boundaryThisRoom: {fileID: 581284099}
+  boundaryThisRoom: {fileID: 447751579}
   boundaryNextRoom: {fileID: 1079502513}
-  doorOpened: 1
+  doorOpened: 0
   walkedThrough: 0
   teleportingRoom: 0
   nextRoomSpawnpoint: {fileID: 581284100}
@@ -14634,7 +14653,7 @@ MonoBehaviour:
   enemyDowned: 
   boundaryThisRoom: {fileID: 2015241249}
   boundaryNextRoom: {fileID: 0}
-  doorOpened: 1
+  doorOpened: 0
   walkedThrough: 0
   teleportingRoom: 0
   nextRoomSpawnpoint: {fileID: 581284100}
@@ -16199,8 +16218,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185501596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.30631, y: -96.25689, z: 0.025276184}
-  m_LocalScale: {x: 84.37458, y: 8.085208, z: 18.956696}
+  m_LocalPosition: {x: -51.30631, y: -98.8408, z: 0.025276184}
+  m_LocalScale: {x: 84.37458, y: 3.0169644, z: 18.956696}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1742695995}
@@ -16548,8 +16567,8 @@ MonoBehaviour:
   enemies: []
   enemyDowned: 
   boundaryThisRoom: {fileID: 1079502513}
-  boundaryNextRoom: {fileID: 0}
-  doorOpened: 1
+  boundaryNextRoom: {fileID: 581284099}
+  doorOpened: 0
   walkedThrough: 0
   teleportingRoom: 0
   nextRoomSpawnpoint: {fileID: 581284100}
@@ -17296,6 +17315,7 @@ MonoBehaviour:
   levelClearingRoom: 1
   endScreen: {fileID: 2129887548}
   TM: {fileID: 1665250453}
+  nextTrigger: {fileID: 0}
 --- !u!1 &1277108800
 GameObject:
   m_ObjectHideFlags: 0
@@ -19070,7 +19090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389351161}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.98, y: -0.013, z: -0.015377569}
+  m_LocalPosition: {x: -4.98, y: -0.337, z: -0.015377569}
   m_LocalScale: {x: 0.7269853, y: 1.5940167, z: 0.059445962}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20033,7 +20053,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f4da2b1f206bcdb4b9fad492ee6aadc9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.123
+  m_Volume: 0.09
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -22775,9 +22795,9 @@ MonoBehaviour:
   bossPrefabs: []
   waveAmounts: 0200000002000000
   enemyCount: 0
-  waveNumber: 1
+  waveNumber: 0
   timeBetweenEnemySpawn: 0
-  timeBetweenWaves: 0
+  timeBetweenWaves: 1
   spawnPoints:
   - {fileID: 1517494182}
   - {fileID: 303177353}
@@ -22788,7 +22808,8 @@ MonoBehaviour:
   ended: 0
   levelClearingRoom: 0
   endScreen: {fileID: 0}
-  TM: {fileID: 0}
+  TM: {fileID: 1665250453}
+  nextTrigger: {fileID: 61677887}
 --- !u!4 &1639455996
 Transform:
   m_ObjectHideFlags: 0
@@ -27130,9 +27151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies: []
   enemyDowned: 
-  boundaryThisRoom: {fileID: 581284099}
+  boundaryThisRoom: {fileID: 1389351161}
   boundaryNextRoom: {fileID: 2117951987}
-  doorOpened: 1
+  doorOpened: 0
   walkedThrough: 0
   teleportingRoom: 1
   nextRoomSpawnpoint: {fileID: 884966086}
@@ -28073,7 +28094,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -28166,8 +28187,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117951987}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.21793, y: 0.797, z: -0.015377569}
-  m_LocalScale: {x: 0.24563137, y: 2.0577643, z: 0.059445962}
+  m_LocalPosition: {x: 1.21793, y: 0.762, z: -0.015377569}
+  m_LocalScale: {x: 1.080778, y: 2.0577643, z: 0.059445962}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1639455996}

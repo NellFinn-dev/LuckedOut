@@ -7,11 +7,11 @@ public class GradeScript : MonoBehaviour
 {
     #region instance variables
     [SerializeField]
-    private FloatSO _Scores;
+    private FloatSO scores;
 
-    public float Points1;
-    public float Points2;
-    public float TotalPoints;
+    public float points1;
+    public float points2;
+    public float totalPoints;
 
     public TextMeshProUGUI text;
 
@@ -20,55 +20,55 @@ public class GradeScript : MonoBehaviour
     // End Screen grading text
     public void Grade()
     {
-        Points1 = _Scores.Time;
-        Points2 = _Scores.BestCombo;
+        points1 = scores.Time;
+        points2 = scores.BestCombo;
 
         GameObject.FindObjectOfType<PlayerInputs>().enabled = false;
 
-        TotalPoints += Points2;
+        totalPoints += points2;
 
-        if (Points1 >= 50)
+        if (points1 >= 50)
         {
-            TotalPoints -= 4;
+            totalPoints -= 4;
         }
 
-        if (Points1 <= 40 && Points1 > 30)
+        if (points1 <= 40 && points1 > 30)
         {
-            TotalPoints -= 3;
+            totalPoints -= 3;
         }
 
-        if (Points1 <= 30 && Points1 > 20)
+        if (points1 <= 30 && points1 > 20)
         {
-            TotalPoints -= 2;
+            totalPoints -= 2;
         }
 
-        if (Points1 <= 20 && Points1 > 10)
+        if (points1 <= 20 && points1 > 10)
         {
-            TotalPoints -=  1;
+            totalPoints -=  1;
         }
 
 
-        if(TotalPoints <= 2)
+        if(totalPoints <= 2)
         {
             text.text = "C";
         }
 
-        if (TotalPoints >= 3 && TotalPoints < 5)
+        if (totalPoints >= 3 && totalPoints < 5)
         {
             text.text = "B";
         }
 
-        if (TotalPoints >= 5 && TotalPoints < 7)
+        if (totalPoints >= 5 && totalPoints < 7)
         {
             text.text = "A";
         }
        
-        if ( TotalPoints >= 7)
+        if ( totalPoints >= 7)
         {
             text.text = "A+";
         }
 
-        if (TotalPoints >= 10)
+        if (totalPoints >= 10)
         {
             text.text = "S";
         }

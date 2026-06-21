@@ -290,8 +290,6 @@ public class CardSharkBossBeh : Entity
 
     public void AttackShuffle()
     {
-
-
         int attackRand = Random.Range(0, 4);
 
         switch (attackRand)
