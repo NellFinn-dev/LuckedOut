@@ -12,14 +12,16 @@ public class MenuLuckyAnimations : MonoBehaviour
    #region Unity Methods
     public void Update()
     {
-        if(animationObjects[menu.selectedIndex] != null && menu.gameObject.activeInHierarchy)
+        if(menu.gameObject.activeInHierarchy)
         {
-            // Activate the corresponding animation object
-            animationObjects[menu.selectedIndex].SetActive(true);
-
             for(int i = 0; i < animationObjects.Length; i++)
             {
-                if(i != menu.selectedIndex && animationObjects[i] != null)
+                if(i == menu.selectedIndex && animationObjects[i] != null)
+                {
+                    // Activate the corresponding animation object
+                    animationObjects[i].SetActive(true);
+                }
+                else if(animationObjects[i] != null)
                 {
                     // Deactivate other animation objects
                     animationObjects[i].SetActive(false);

@@ -1244,7 +1244,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
   m_sharedMaterial: {fileID: 4579740702308106487, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &701927601
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   currentScreen: {fileID: 618377342}
   originalPosition: {x: 0, y: 0, z: 0}
   originalScale: {x: 372.7367, y: 55.974, z: 0.45199}
-  transitionEffect: {fileID: 0}
+  transitionEffect: {fileID: 595907951}
   isTransitiong: 0
   volumeUpAction:
     m_UseReference: 1
@@ -2608,7 +2608,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: OPTIONS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
   m_sharedMaterial: {fileID: 4579740702308106487, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2672,7 +2672,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1015377018
@@ -2697,11 +2697,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   option: 1
   menu: {fileID: 618377342}
-  screenToSwitchTo: {fileID: 0}
+  screenToSwitchTo: {fileID: 1161845325}
   currentScreen: {fileID: 618377342}
   originalPosition: {x: -146, y: -197.9786, z: -126}
   originalScale: {x: 0.45199, y: 0.45199, z: 0.45199}
-  transitionEffect: {fileID: 0}
+  transitionEffect: {fileID: 595907951}
   isTransitiong: 0
   volumeUpAction:
     m_UseReference: 1
@@ -4198,8 +4198,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Casino
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
-  m_sharedMaterial: {fileID: 4579740702308106487, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
+  m_sharedMaterial: {fileID: -3253304862361126585, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4262,7 +4262,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1295740080
@@ -4619,6 +4619,37 @@ Transform:
   - {fileID: 818028885}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1495272586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495272587}
+  m_Layer: 0
+  m_Name: Emptyformultipleuses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495272587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495272586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -78.484024, y: -24.187876, z: -1.3870053}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1755054421
 GameObject:
@@ -5078,7 +5109,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: EXIT GAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
   m_sharedMaterial: {fileID: 4579740702308106487, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5142,7 +5173,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1783710462
@@ -5165,13 +5196,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93477940360e1a478064e3aa066230c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  option: 1
+  option: 4
   menu: {fileID: 618377342}
-  screenToSwitchTo: {fileID: 0}
+  screenToSwitchTo: {fileID: 1161845325}
   currentScreen: {fileID: 618377342}
   originalPosition: {x: -146, y: -217.3, z: -126}
   originalScale: {x: 0.45199, y: 0.45199, z: 0.45199}
-  transitionEffect: {fileID: 0}
+  transitionEffect: {fileID: 595907951}
   isTransitiong: 0
   volumeUpAction:
     m_UseReference: 1
@@ -5442,8 +5473,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PRESS ENTER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
-  m_sharedMaterial: {fileID: 4579740702308106487, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
+  m_sharedMaterial: {fileID: -3253304862361126585, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5577,6 +5608,51 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+--- !u!1 &1902942225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902942227}
+  - component: {fileID: 1902942226}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1902942226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902942225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 206f5f1e07b33c04eadc7144ef5ca21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitstopTime: 0
+--- !u!4 &1902942227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902942225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 457.27008, y: 603.84503, z: -8.547615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1908338724
 GameObject:
   m_ObjectHideFlags: 0
@@ -5638,8 +5714,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
-  m_sharedMaterial: {fileID: 4579740702308106487, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
+  m_sharedMaterial: {fileID: -3253304862361126585, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5702,7 +5778,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1908338727
@@ -5731,7 +5807,7 @@ MonoBehaviour:
   currentScreen: {fileID: 1161845325}
   originalPosition: {x: -146, y: -217.3, z: -126}
   originalScale: {x: 0.45199, y: 0.45199, z: 0.45199}
-  transitionEffect: {fileID: 0}
+  transitionEffect: {fileID: 595907951}
   isTransitiong: 0
   volumeUpAction:
     m_UseReference: 1
@@ -6032,8 +6108,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Station Pt.1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
-  m_sharedMaterial: {fileID: 4579740702308106487, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
+  m_sharedMaterial: {fileID: -3253304862361126585, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6096,7 +6172,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1972979879

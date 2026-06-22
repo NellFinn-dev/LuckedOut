@@ -156,13 +156,14 @@ public class VerticalSelectionMenu : MonoBehaviour
         if (moveAction.action.WasPressedThisFrame())
         {
             Vector2 input = moveAction.action.ReadValue<Vector2>();
-            if (input.y > 0.5f) selectedIndex = Mathf.Max(0, selectedIndex - 1);
-            else if (input.y < -0.5f) selectedIndex = Mathf.Min(items.Length - 1, selectedIndex + 1);
-        }
-
-        if (submitAction.action.WasPressedThisFrame())
-        {
-            Debug.Log("Confirmed: " + items[selectedIndex].name);
+            if (input.y > 0.5f) 
+            {
+                selectedIndex = Mathf.Max(0, selectedIndex - 1);
+            }
+            else if (input.y < -0.5f) 
+            {
+                selectedIndex = Mathf.Min(items.Length - 1, selectedIndex + 1);
+            }
         }
     }
 

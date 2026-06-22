@@ -10,7 +10,7 @@ public class Entity : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public SpriteRenderer renderer;
+    public SpriteRenderer Entityrenderer;
 
     public int health;
 
@@ -329,11 +329,11 @@ public class Entity : MonoBehaviour
     // IEnumerator to render the flashing for damage
     public IEnumerator damageFlash(float flashTime)
     {
-        renderer.material = materials[1];
+        Entityrenderer.material = materials[1];
 
         yield return new WaitForSecondsRealtime(flashTime);
 
-        renderer.material = materials[0];
+        Entityrenderer.material = materials[0];
     }
 
     #endregion

@@ -292,15 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomSelected: 0
   roomTops: []
-  camSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   cam: {fileID: 8335447780812149933}
-  camSwitching: 1
   roomTopsOn: 0
 --- !u!114 &6285207589524225098
 MonoBehaviour:
@@ -670,6 +662,10 @@ PrefabInstance:
       propertyPath: TM
       value: 
       objectReference: {fileID: 2818980953416886015}
+    - target: {fileID: 5799675914858733533, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
+      propertyPath: attackRange
+      value: 1.76
+      objectReference: {fileID: 0}
     - target: {fileID: 7641441637787584642, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
       propertyPath: AM
       value: 
@@ -682,6 +678,10 @@ PrefabInstance:
       propertyPath: TM
       value: 
       objectReference: {fileID: 2818980953416886015}
+    - target: {fileID: 8848402603792659525, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
+      propertyPath: Entityrenderer
+      value: 
+      objectReference: {fileID: 1161966781322815574}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -690,6 +690,11 @@ PrefabInstance:
 --- !u!4 &268312536938382801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4472418831751115739, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
+  m_PrefabInstance: {fileID: 4442807560310224394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1161966781322815574 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3280915546584456796, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
   m_PrefabInstance: {fileID: 4442807560310224394}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4271657318161946848 stripped
@@ -791,7 +796,7 @@ PrefabInstance:
     - target: {fileID: 2328330671226038842, guid: 133370d251ee5ca4fad7f2f02d768180, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+      objectReference: {fileID: 11400000, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
     - target: {fileID: 2328330671226038842, guid: 133370d251ee5ca4fad7f2f02d768180, type: 3}
       propertyPath: m_fontSizeBase
       value: 40.5
@@ -799,7 +804,7 @@ PrefabInstance:
     - target: {fileID: 2328330671226038842, guid: 133370d251ee5ca4fad7f2f02d768180, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 4579740702308106487, guid: 774e2d0cbc70e3d44b6b63bd385ca5d9, type: 2}
+      objectReference: {fileID: -3253304862361126585, guid: dc403e5f0f8694a458f693ebe01fcd69, type: 2}
     - target: {fileID: 2328330671226038842, guid: 133370d251ee5ca4fad7f2f02d768180, type: 3}
       propertyPath: m_characterSpacing
       value: 10.27
@@ -994,7 +999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818493001894112134, guid: 133370d251ee5ca4fad7f2f02d768180, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -18
+      value: -33.8
       objectReference: {fileID: 0}
     - target: {fileID: 4827711861897441894, guid: 133370d251ee5ca4fad7f2f02d768180, type: 3}
       propertyPath: scene

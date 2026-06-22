@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5598050293635580482}
-  renderer: {fileID: 5616291579549896724}
+  Entityrenderer: {fileID: 5616291579549896724}
   health: 4
   canBeHit: 1
   knockbackSpeed: 15
