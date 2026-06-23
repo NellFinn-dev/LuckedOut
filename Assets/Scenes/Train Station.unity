@@ -4363,11 +4363,13 @@ MonoBehaviour:
   moveSpeed: 12
   dashSpeed: 40
   playercontrol: {fileID: 0}
+  entityScript: {fileID: 0}
   inputScript: {fileID: 341149901}
   dashing: 0
   dashEffects: []
   attackScript: {fileID: 0}
   AM: {fileID: 0}
+  momentumforTesting: {x: 0, y: 0}
 --- !u!114 &341149901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9640,6 +9642,10 @@ PrefabInstance:
       propertyPath: currentScene
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1127706167190823181, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: allowedDelay
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2254124897864474239, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: sounds.Array.size
       value: 18
@@ -9712,6 +9718,10 @@ PrefabInstance:
       propertyPath: darkenScreenAnim
       value: 
       objectReference: {fileID: 1160656919}
+    - target: {fileID: 6315136573264412296, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
+      propertyPath: dashTime
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 6315136573264412296, guid: 534801eaee1538c4a889279a8610ea86, type: 3}
       propertyPath: attackScript
       value: 
@@ -28009,11 +28019,6 @@ MonoBehaviour:
   Attacking: 0
   AttackTime: 0.9
   Closenes: 0
-  ProjectileSpots:
-  - {fileID: 467170899}
-  - {fileID: 1045373305}
-  - {fileID: 501052764}
-  Projectile: {fileID: 1264864275760002938, guid: fa4bec6bef6248d4aafcf05674176a6d, type: 3}
   Animations: {fileID: 2092574318}
   AttackSpeed: 0
   Back: {fileID: 2096826803}

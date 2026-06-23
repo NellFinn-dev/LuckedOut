@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5745408641102520433}
   - component: {fileID: 5616291579549896724}
   - component: {fileID: 2658038422449643749}
+  - component: {fileID: 1969374205326184268}
   - component: {fileID: 3573501626002795888}
   m_Layer: 0
   m_Name: Animations
@@ -107,6 +108,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1969374205326184268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151286375670760234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c5ad523f34b674cb4b6e223ac0924c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AM: {fileID: 0}
+  rangedEnemyScript: {fileID: 2121962189277035443}
+  anim: {fileID: 2658038422449643749}
+  ProjectileSpots:
+  - {fileID: 2634046089628442216}
+  - {fileID: 2628085869472009090}
+  - {fileID: 8120262560508543598}
+  Projectile: {fileID: 1264864275760002938, guid: fa4bec6bef6248d4aafcf05674176a6d, type: 3}
 --- !u!114 &3573501626002795888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,11 +351,6 @@ MonoBehaviour:
   Attacking: 0
   AttackTime: 0.9
   Closenes: 0
-  ProjectileSpots:
-  - {fileID: 2634046089628442216}
-  - {fileID: 2628085869472009090}
-  - {fileID: 8120262560508543598}
-  Projectile: {fileID: 1264864275760002938, guid: fa4bec6bef6248d4aafcf05674176a6d, type: 3}
   Animations: {fileID: 5616291579549896724}
   AttackSpeed: 0
   Back: {fileID: 3425116726326342131}

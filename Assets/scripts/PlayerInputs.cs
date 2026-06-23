@@ -113,6 +113,17 @@ public class PlayerInputs : MonoBehaviour
         }
     }
 
+    public void directionCheck()
+    {
+        if(moveDirection.x > 0)
+        {
+            entityScript.facingRight = true;
+        } else if (moveDirection.x < 0)
+        {
+            entityScript.facingRight = false;
+        }
+    }
+
     public void Punch(InputAction.CallbackContext context)
     {
         // if (playercontrol.canPerformActions || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") && !levelEnded) add this back for one punch

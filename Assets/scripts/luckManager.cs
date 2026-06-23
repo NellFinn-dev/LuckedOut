@@ -100,7 +100,7 @@ public class luckManager : MonoBehaviour
 
         if (rand == 3)
         {
-            // Find a third effect
+             luckText.text = "Womp Womp...";
         }
     }
 

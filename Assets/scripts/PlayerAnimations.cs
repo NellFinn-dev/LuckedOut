@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
@@ -110,6 +111,33 @@ public class PlayerAnimations : MonoBehaviour
         transitionScript.transitionTrigger();
     }
 
+    public void callDirectionCheck()
+    {
+        inputScript.directionCheck();
+
+        if(!playerEntityScript.facingRight)
+        {
+            playerRenderer.flipX = true;
+            playerScript.facingRight = false;
+
+            for (int i = 0; i < leftParticles.Length; i++)
+            {
+                leftParticles[i].SetActive(true);
+                rightParticles[i].SetActive(false);
+            }
+
+        } else
+        {
+            playerRenderer.flipX = false;
+            playerScript.facingRight = true;
+
+            for (int i = 0; i < rightParticles.Length; i++)
+            {
+                rightParticles[i].SetActive(true);
+                leftParticles[i].SetActive(false);
+            }
+        }
+    }   
     #endregion
 
 

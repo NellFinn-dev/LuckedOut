@@ -126,11 +126,6 @@ MonoBehaviour:
   Attacking: 0
   AttackTime: 0.9
   Closenes: 0
-  ProjectileSpots:
-  - {fileID: 3627438782448320302}
-  - {fileID: 1238782582819859661}
-  - {fileID: 2724070429943589024}
-  Projectile: {fileID: 1264864275760002938, guid: fa4bec6bef6248d4aafcf05674176a6d, type: 3}
   Animations: {fileID: 2173790058558332891}
   AttackSpeed: 0
   Back: {fileID: 9112590427604380254}
@@ -185,6 +180,7 @@ GameObject:
   - component: {fileID: 2173790058558332891}
   - component: {fileID: 8156695825616466967}
   - component: {fileID: 3674083099006710696}
+  - component: {fileID: 542897264693657498}
   m_Layer: 0
   m_Name: Animations
   m_TagString: Untagged
@@ -293,6 +289,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refObject: {fileID: 5282625436701259966}
+--- !u!114 &542897264693657498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748696521224303684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c5ad523f34b674cb4b6e223ac0924c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AM: {fileID: 0}
+  rangedEnemyScript: {fileID: 3762239809884058835}
+  anim: {fileID: 8156695825616466967}
+  ProjectileSpots:
+  - {fileID: 3627438782448320302}
+  - {fileID: 1238782582819859661}
+  - {fileID: 2724070429943589024}
+  Projectile: {fileID: 1264864275760002938, guid: fa4bec6bef6248d4aafcf05674176a6d, type: 3}
 --- !u!1 &4342650886268341288
 GameObject:
   m_ObjectHideFlags: 0

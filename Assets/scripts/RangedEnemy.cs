@@ -17,8 +17,6 @@ public class RangedEnemy : Entity
     public bool Attacking;
     public float AttackTime;
     public float Closenes;
-    public Transform[] ProjectileSpots;
-    public GameObject Projectile;
     public SpriteRenderer Animations;
     public float AttackSpeed;
     public Transform Back;
@@ -155,16 +153,9 @@ public class RangedEnemy : Entity
             shakeScript.triggerShake();
             //rb.velocity = Vector2.MoveTowards(transform.position, Player.position, AttackSpeed * Time.deltaTime);
 
-
             Attacking = true;
             StartCoroutine("AttackReset");
-            anim.SetTrigger("Attack");
-
-            for (int i = 0; i < ProjectileSpots.Length; i++)
-            {
-                Instantiate(Projectile, ProjectileSpots[i].position, ProjectileSpots[i].rotation);
-            }
-            
+            anim.SetTrigger("Attack");            
         }
     }
 

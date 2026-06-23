@@ -51,13 +51,13 @@ public class PlayerAttack : MonoBehaviour
         moveDir = inputScript.moveDirection;
         lastmoveDir = inputScript.lastmoveDirection;
 
-        moveDir = inputScript.move.ReadValue<Vector2>();
+        //moveDir = inputScript.move.ReadValue<Vector2>();
         // Calls the animations for attacking and uses that to determine the attacking variable (bool)
         attacking = animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchL") 
                  || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("PunchR")
                  || animScript.anim.GetCurrentAnimatorStateInfo(0).IsName("Kick 1");
 
-        if(delayTimer <= 0)
+        if(delayTimer <= 0 && !attacking)
         {
             animScript.anim.ResetTrigger("PunchL");
             animScript.anim.ResetTrigger("PunchR");
@@ -65,7 +65,7 @@ public class PlayerAttack : MonoBehaviour
             attackCount = 0;
         } else
         {
-            delayTimer -= Time.deltaTime;
+            delayTimer -= Time.fixedDeltaTime;
         }
         
     }
@@ -81,16 +81,25 @@ public class PlayerAttack : MonoBehaviour
             switch (attackCount)
             {
                 case 0:
+                    animScript.anim.ResetTrigger("PunchL");
+                    animScript.anim.ResetTrigger("PunchR");
+                    animScript.anim.ResetTrigger("Kick");
                     animScript.anim.SetTrigger("PunchL");
                     attackCount++;
                     break;
                 case 1:
-                    animScript.anim.SetTrigger("PunchR");
+                    animScript.anim.ResetTrigger("PunchL");
+                    animScript.anim.ResetTrigger("PunchR");
+                    animScript.anim.ResetTrigger("Kick");
+                    animScript.anim.SetTrigger("PunchR");   
                     attackCount++;
                     break;
                 case 2:
+                    animScript.anim.ResetTrigger("PunchL");
+                    animScript.anim.ResetTrigger("PunchR");
+                    animScript.anim.ResetTrigger("Kick");
                     animScript.anim.SetTrigger("Kick");
-                    attackCount = 0;
+                    attackCount++;
                     break;
             }
 
@@ -109,7 +118,7 @@ public class PlayerAttack : MonoBehaviour
         animScript.anim.ResetTrigger("PunchL");
         animScript.anim.ResetTrigger("PunchR");
         animScript.anim.ResetTrigger("Kick");
-
+        rb.velocity = Vector3.zero;
         animScript.anim.SetBool("Dashing", true);
         attackCount = 0;
     }
@@ -126,12 +135,24 @@ public class PlayerAttack : MonoBehaviour
     // IEnumerator for punch sliding
     public IEnumerator PunchSlide()
     {
-        rb.velocity = new Vector3(lastmoveDir.x, lastmoveDir.y, 0f) * punchSpeed;
+        if(!movementScript.dashing)
+        {
+            rb.velocity = new Vector3(lastmoveDir.x, lastmoveDir.y, 0f) * punchSpeed;
+        } else
+        {
+            yield break;
+        }
 
         yield return new WaitForSeconds(punchTime);
 
-        rb.velocity = Vector3.zero;
-
+        if(!movementScript.dashing)
+        {
+            rb.velocity = Vector3.zero;
+        }else
+        {
+            yield break;
+        }
+        
         yield return null;
     }
 

@@ -12,10 +12,10 @@ public class Player : MonoBehaviour
     public PlayerAttack attackScript;
     public bool canPerformActions;
     public bool facingRight;
-
     public float fullHealth;
 
     public Animator luckyFaceAnim;
+    public bool iFrames;
 
     #endregion
 

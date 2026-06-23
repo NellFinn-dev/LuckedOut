@@ -594,6 +594,18 @@ PrefabInstance:
       propertyPath: AM
       value: 
       objectReference: {fileID: 2254124897864474239}
+    - target: {fileID: 3606942565533275911, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
+      propertyPath: punchTime
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606942565533275911, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
+      propertyPath: allowedDelay
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606942565533275911, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
+      propertyPath: coolDownTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4221046621637519015, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
       propertyPath: m_Name
       value: 'Lucky '
@@ -670,6 +682,10 @@ PrefabInstance:
       propertyPath: AM
       value: 
       objectReference: {fileID: 2254124897864474239}
+    - target: {fileID: 7641441637787584642, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
+      propertyPath: dashTime
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8848402603792659525, guid: 74e652d9d4c9c0d41a9867a3e087d31c, type: 3}
       propertyPath: AM
       value: 
