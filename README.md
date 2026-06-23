@@ -1,7 +1,5 @@
 Lucked Out!: A faced paced 2D Brawler I'm devloping in Unity
 
-![LuckedOut2026-02-0710-51-43-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/cb9d5f8c-0c69-4a15-a747-1a2a580779bc)
-
 <img width="600" height="338" alt="IMG_8557" src="https://github.com/user-attachments/assets/2f8251b2-f0bb-4029-92a5-50669d2c11c2" />
 
 <img width="600" height="338" alt="IMG_8552" src="https://github.com/user-attachments/assets/472c3f2d-0c0d-41ed-994a-fac6ede96a8a" />
