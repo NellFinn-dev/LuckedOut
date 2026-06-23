@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a640eb8dfcb7af245b77d00a35dc8303, type: 3}
   m_Name: FloatSo
   m_EditorClassIdentifier: 
-  _Time: 20.199999
-  _BestTime: 20.2
+  _Time: 0
+  _BestTime: 0
   _Combo: 0
   _BestCombo: 0
