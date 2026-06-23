@@ -2,36 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class TimerThingAddup : MonoBehaviour
 {
     #region instance variables
-    public bool On;
     public TextMeshProUGUI Timetxt;
     public TextMeshProUGUI BestCombo;
     public TextMeshProUGUI BestTime;
     public float ammount;
     [SerializeField]
-    private FloatSO _Time;
-    public int timeInt;
-    public int bestTimeInt;
+    private FloatSO timeSO;
+
+    public GradeScript gradeScript;
+    public GameObject newBestCombo;
+    public GameObject newBestTime;
+
     #endregion
 
     #region methods
     // Displays text for the scoring
     private void OnEnable()
     {
-        if(_Time.Time < _Time.BestTime)
+        if(timeSO.Time < timeSO.BestTime || timeSO.BestTime == 0)
         {
-            _Time.BestTime = _Time.Time;
+            timeSO.BestTime = timeSO.Time;
+            newBestTime.SetActive(true);
         }
 
-        timeInt = (int)_Time.Time;
-        bestTimeInt = (int)_Time.BestTime;
-        Timetxt.text = timeInt + "s";
-        BestCombo.text = "" + _Time.BestCombo;
-        BestTime.text = "" + (int)_Time.BestTime + "s";
+        if(timeSO.Combo > timeSO.BestCombo)
+        {
+            timeSO.BestCombo = timeSO.Combo;
+            newBestCombo.SetActive(true);
+        }
+
+        Timetxt.text =  timeSO.Time.ToString("f2") + "s";
+        BestCombo.text = "" + timeSO.BestCombo;
+        BestTime.text = "" + timeSO.BestTime.ToString("f2") + "s";
+
+        gradeScript.Grade();
     }
+
     #endregion
 
 }

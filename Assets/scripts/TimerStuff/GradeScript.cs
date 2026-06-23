@@ -5,73 +5,67 @@ using TMPro;
 
 public class GradeScript : MonoBehaviour
 {
-    #region instance variables
-    [SerializeField]
+    #region Instance Variables
+
+    [SerializeField] 
     private FloatSO scores;
 
-    public float points1;
-    public float points2;
     public float totalPoints;
 
     public TextMeshProUGUI text;
+    public Color sRankColor;
 
     #endregion
 
     // End Screen grading text
     public void Grade()
     {
-        points1 = scores.Time;
-        points2 = scores.BestCombo;
+        float timePoints  = scores.Time;
+        float comboPoints = scores.BestCombo;
 
-        GameObject.FindObjectOfType<PlayerInputs>().enabled = false;
+        //FindObjectOfType<PlayerInputs>().enabled = false;
 
-        totalPoints += points2;
+        totalPoints = comboPoints;
 
-        if (points1 >= 50)
+        // Penalise slower times (higher time = worse for a speedrun)
+        if (timePoints >= 50) 
         {
-            totalPoints -= 4;
+            totalPoints -= 35;
+        }
+        else if (timePoints >= 40) 
+        {
+            totalPoints -= 25;
+        }
+        else if (timePoints > 30) 
+        {
+            totalPoints -= 15;
         }
 
-        if (points1 <= 40 && points1 > 30)
-        {
-            totalPoints -= 3;
-        }
+        // Assign grade
+        string grade;
 
-        if (points1 <= 30 && points1 > 20)
+        if (totalPoints >= 40) 
         {
-            totalPoints -= 2;
+            grade = "S";
+            text.color = sRankColor;
         }
-
-        if (points1 <= 20 && points1 > 10)
+        else if (totalPoints >= 35)
         {
-            totalPoints -=  1;
+            grade = "A+";
         }
-
-
-        if(totalPoints <= 2)
+        else if (totalPoints >= 30)  
         {
-            text.text = "C";
+            grade = "A";
         }
-
-        if (totalPoints >= 3 && totalPoints < 5)
-        {
-            text.text = "B";
+        else if (totalPoints >= 25)
+        {  
+            grade = "B";
         }
-
-        if (totalPoints >= 5 && totalPoints < 7)
-        {
-            text.text = "A";
+        else       
+        {                 
+            grade = "C";
         }
-       
-        if ( totalPoints >= 7)
-        {
-            text.text = "A+";
-        }
-
-        if (totalPoints >= 10)
-        {
-            text.text = "S";
-        }
-
+        
+        text.text = grade;
     }
 }
