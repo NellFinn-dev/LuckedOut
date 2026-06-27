@@ -7,5 +7,3 @@ Lucked Out!: A faced paced 2D Brawler I'm devloping in Unity
 <img width="600" height="338" alt="IMG_8553" src="https://github.com/user-attachments/assets/0e3acf94-ef93-438c-b3ad-e9b58e14f011" />
 
 <img width="600" height="338" alt="IMG_8554" src="https://github.com/user-attachments/assets/5e93f402-f731-4eae-ba05-71bdfb7b0874" />
-
-This is the repository for the project
