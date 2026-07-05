@@ -126,7 +126,6 @@ public class PlayerAttack : MonoBehaviour
     public IEnumerator coolDown(float coolDownTime)
     {
         attackCooldown = true;
-
         yield return new WaitForSeconds(coolDownTime);
         attackCount = 0;
         attackCooldown = false;

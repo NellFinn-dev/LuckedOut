@@ -255,17 +255,6 @@
                 },
                 {
                     "name": "",
-                    "id": "b2d3b2a7-0cf9-45d6-b583-2c70f8a9d9b0",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Punch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "0f68dd79-89a1-4938-b044-024c7d75cb4b",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
@@ -311,22 +300,11 @@
                 {
                     "name": "",
                     "id": "aba2459e-0f73-48c8-acce-8ae8802dc9a0",
-                    "path": "<Gamepad>/start",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Start",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6a43f3c8-0f10-48c6-8098-1466fa980c74",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SlotMachine",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

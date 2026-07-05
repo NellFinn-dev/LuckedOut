@@ -25,12 +25,19 @@ public class MenuOptionBehaviors : MonoBehaviour
     public InputActionProperty volumeDownAction;
 
     public bool selected;
+    public bool selectable;
     #endregion
 
     #region methods
 
     public void ActionCalled()
     {
+
+        if(!selectable)
+        {
+            return;
+        }
+        
         screenToSwitchTo.GetComponent<VerticalSelectionMenu>().selectedIndex = -1;
 
         switch (option)

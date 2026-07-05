@@ -21,7 +21,7 @@ public class GradeScript : MonoBehaviour
     public void Grade()
     {
         float timePoints  = scores.Time;
-        float comboPoints = scores.BestCombo;
+        float comboPoints = scores.Combo;
 
         //FindObjectOfType<PlayerInputs>().enabled = false;
 
